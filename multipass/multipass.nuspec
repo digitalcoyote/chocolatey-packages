@@ -37,7 +37,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <title>Multipass</title>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://multipass.run/</projectUrl>
-    <!-- <iconUrl></iconUrl> -->
+    <iconUrl>https://rawcdn.githack.com/canonical/multipass/a5e5391bf8d9ce2dcfa4af087587fcfd1c226152/data/multipass.gui.svg</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://github.com/canonical/multipass/blob/master/COPYING.GPL.txt</licenseUrl>
