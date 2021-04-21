@@ -13,24 +13,28 @@ $InstallArgs = @{
 Install-ChocolateyPackage  @InstallArgs
 
 if ($PROFILE -and (Test-Path $PROFILE)) {
+    $oldProfile = Get-Content $PROFILE
     $OhMyPoshInProfile = @(
-        (Select-String -SimpleMatch 'Import-Module oh-my-posh' -Path $PROFILE -Raw)
-        (Select-String -SimpleMatch 'Invoke-Expression (oh-my-posh --init --shell pwsh' -Path $PROFILE -Raw)
-        (Select-String -SimpleMatch 'Set-PoshPrompt' -Path $PROFILE -Raw)
+        ($oldProfile | Select-String -SimpleMatch 'Import-Module oh-my-posh' | Select-Object -ExpandProperty Line)
+        ($oldProfile | Select-String -SimpleMatch 'Invoke-Expression (oh-my-posh --init --shell pwsh' | Select-Object -ExpandProperty Line)
+        ($oldProfile | Select-String -SimpleMatch 'Set-PoshPrompt' | Select-Object -ExpandProperty Line)
     )
     if ($pp['Theme']) {
-        if (Test-Path "$env:LocalAppDataPrograms/oh-my-posh/themes/$($p['Theme'])).omp.json") {
-            $ohMyPoshProfileLine = "Invoke-Expression (oh-my-posh --init --shell pwsh --config ""$env:LocalAppDataPrograms/oh-my-posh/themes/$($p['Theme'])).omp.json"")"
+        $themeName = $pp['Theme']
+        if (Test-Path "$env:LocalAppDataPrograms/oh-my-posh/themes/$($themeName)).omp.json") {
+            $ohMyPoshProfileLine = "Invoke-Expression (oh-my-posh --init --shell pwsh --config ""$env:LocalAppDataPrograms/oh-my-posh/themes/$($themeName)).omp.json"")"
+            # $ohMyPoshProfileLine = "Set-PoshPrompt -Theme $themeName" # Suggestion for possible alternative
             if ($OhMyPoshInProfile) {
                 # If a theme is set, Overwrite old line to set new theme
-                foreach ($line in $OhMyPoshInProfile) {
-                    Write-Host "Overwriting Old Oh-My-Posh line: $line with $ohMyPoshProfileLine"
-                    Get-Content $PROFILE | Select-String -SimpleMatch $line -NotMatch | Out-File $PROFILE
+                foreach ($existingLine in $OhMyPoshInProfile) {
+                    Write-Host "Overwriting Old Oh-My-Posh line: $existingLine with $ohMyPoshProfileLine"
+                    $oldProfile | ForEach-Object { $_ -replace $existingLine, $ohMyPoshProfileLine } | Set-Content -Path $PROFILE -Force
                 }
+            } else {
+                Add-Content -Path $PROFILE -Value $ohMyPoshProfileLine -Force
             }
-            Add-Content -Path $PROFILE -Value $ohMyPoshProfileLine -Force
         } else {
-            Throw "Could not find Theme $pp['Theme'] @ $env:LocalAppDataPrograms/oh-my-posh/themes/$($p['Theme'])).omp.json";
+            Throw "Could not find Theme $themeName @ $env:LocalAppDataPrograms/oh-my-posh/themes/$($themeName)).omp.json";
         }
     } elseif (-Not($OhMyPoshInProfile)) {
         Add-Content -Path $PROFILE -Value 'Invoke-Expression (oh-my-posh --init --shell pwsh)`n';
