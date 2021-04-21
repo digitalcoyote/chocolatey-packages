@@ -13,13 +13,13 @@ $InstallArgs = @{
 Install-ChocolateyPackage  @InstallArgs
 
 if ($PROFILE -and (Test-Path $PROFILE)) {
+    $OhMyPoshInProfile = @(
+        (Select-String -SimpleMatch 'Import-Module oh-my-posh' -Path $PROFILE -Raw)
+        (Select-String -SimpleMatch 'Invoke-Expression (oh-my-posh --init --shell pwsh' -Path $PROFILE -Raw)
+        (Select-String -SimpleMatch 'Set-PoshPrompt' -Path $PROFILE -Raw)
+    )
     if ($pp['Theme']) {
         if (Test-Path "$env:LocalAppDataPrograms/oh-my-posh/themes/$($p['Theme'])).omp.json") {
-            $OhMyPoshInProfile = @(
-                (Select-String -SimpleMatch 'Import-Module oh-my-posh' -Path $PROFILE -Raw)
-                (Select-String -SimpleMatch 'Invoke-Expression (oh-my-posh --init --shell pwsh' -Path $PROFILE -Raw)
-                (Select-String -SimpleMatch 'Set-PoshPrompt' -Path $PROFILE -Raw)
-            )
             $ohMyPoshProfileLine = "Invoke-Expression (oh-my-posh --init --shell pwsh --config ""$env:LocalAppDataPrograms/oh-my-posh/themes/$($p['Theme'])).omp.json"")"
             if ($OhMyPoshInProfile) {
                 # If a theme is set, Overwrite old line to set new theme
@@ -32,7 +32,7 @@ if ($PROFILE -and (Test-Path $PROFILE)) {
         } else {
             Throw "Could not find Theme $pp['Theme'] @ $env:LocalAppDataPrograms/oh-my-posh/themes/$($p['Theme'])).omp.json";
         }
-    } else {
+    } elseif (-Not($OhMyPoshInProfile)) {
         Add-Content -Path $PROFILE -Value 'Invoke-Expression (oh-my-posh --init --shell pwsh)`n';
     }
 
