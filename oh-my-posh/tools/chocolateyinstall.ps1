@@ -22,8 +22,8 @@ if ($PROFILE -and (Test-Path $PROFILE)) {
   if ($pp['Theme']) {
     $themeName = $pp['Theme']
     if (Test-Path "$env:LocalAppDataPrograms/oh-my-posh/themes/$($themeName).omp.json") {
-      $ohMyPoshProfileLine = "Invoke-Expression (oh-my-posh --init --shell pwsh --config ""$env:LocalAppDataPrograms/oh-my-posh/themes/$($themeName).omp.json"")"
-      # $ohMyPoshProfileLine = "Set-PoshPrompt -Theme $themeName" # Suggestion for possible alternative
+      # $ohMyPoshProfileLine = "Invoke-Expression (oh-my-posh --init --shell pwsh --config ""$env:LocalAppDataPrograms/oh-my-posh/themes/$($themeName).omp.json"")"
+      $ohMyPoshProfileLine = "Set-PoshPrompt -Theme $themeName" # Newer method of setting theme
       if ($OhMyPoshInProfile) {
         # If a theme is set, Overwrite old line to set new theme
         foreach ($existingLine in $OhMyPoshInProfile) {
@@ -37,7 +37,8 @@ if ($PROFILE -and (Test-Path $PROFILE)) {
       Throw "Could not find Theme $themeName @ $env:LocalAppDataPrograms/oh-my-posh/themes/$($themeName).omp.json";
     }
   } elseif (-Not($OhMyPoshInProfile)) {
-    Add-Content -Path $PROFILE -Value 'Invoke-Expression (oh-my-posh --init --shell pwsh --config "$(scoop prefix oh-my-posh)/themes/jandedobbeleer.omp.json")';
+    # Add-Content -Path $PROFILE -Value 'Invoke-Expression (oh-my-posh --init --shell pwsh --config "$(scoop prefix oh-my-posh)/themes/jandedobbeleer.omp.json")';
+    Add-Content -Path $PROFILE -Value 'Set-PoshPrompt -Theme jandedobbeleer'; # Newer method of setting theme
     Add-Content -Path $PROFILE -Value 'Use the command ''Get-PoshThemes'' to display every available theme in the current directory'
     Add-Content -Path $PROFILE -Value '# For information about setting your oh-my-posh themes: https://ohmyposh.dev/docs/installation#3-replace-your-existing-prompt'
   }
