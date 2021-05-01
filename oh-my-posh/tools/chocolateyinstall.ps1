@@ -1,6 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 $pp = Get-PackageParameters
 
+
 $InstallArgs = @{ 
   PackageName = $env:ChocolateyPackageName
   FileType = 'exe'
@@ -13,49 +14,37 @@ $InstallArgs = @{
 Install-ChocolateyPackage  @InstallArgs
 
 if ($PROFILE -and (Test-Path $PROFILE)) {
-  $oldProfile = @(Get-Content $PROFILE)
-
-  $newProfile = @()
-  foreach ($line in $oldProfile) {
-    if ($line -like 'Import-Module oh-my-posh' -or $line -like 'Invoke-Expression (oh-my-posh --init --shell pwsh*') {
-      if ($pp['Theme']) {
+  $oldProfile = Get-Content $PROFILE
+  $OhMyPoshInProfile = @(
+    ($oldProfile | Select-String -SimpleMatch 'Import-Module oh-my-posh' | Select-Object -ExpandProperty Line)
+    ($oldProfile | Select-String -SimpleMatch 'Invoke-Expression (oh-my-posh --init --shell pwsh' | Select-Object -ExpandProperty Line)
+    ($oldProfile | Select-String -SimpleMatch 'Set-PoshPrompt' | Select-Object -ExpandProperty Line)
+  )
+  if ($pp['Theme']) {
+    $themeName = $pp['Theme']
+    if (Test-Path "$env:LocalAppDataPrograms/oh-my-posh/themes/$($themeName).omp.json") {
+      # $ohMyPoshProfileLine = "Invoke-Expression (oh-my-posh --init --shell pwsh --config ""$env:LocalAppDataPrograms/oh-my-posh/themes/$($themeName).omp.json"")"
+      $ohMyPoshProfileLine = "Set-PoshPrompt -Theme $themeName" # Newer method of setting theme
+      if ($OhMyPoshInProfile) {
         # If a theme is set, Overwrite old line to set new theme
-        if (Test-Path "$env:LocalAppDataPrograms/oh-my-posh/themes/$($p['Theme'])).omp.json") {
-          $ohMyPoshProfileLine = "Invoke-Expression (oh-my-posh --init --shell pwsh --config ""$env:LocalAppDataPrograms/oh-my-posh/themes/$($p['Theme'])).omp.json"")"
-          Write-Host "Overwriting Old Oh-My-Posh line: $line with $ohMyPoshProfileLine"
-          $newProfile += $ohMyPoshProfileLine;
+        foreach ($existingLine in $OhMyPoshInProfile) {
+          Write-Host "Overwriting Old Oh-My-Posh line: $existingLine with $ohMyPoshProfileLine"
+          $oldProfile | ForEach-Object { $_ -replace $existingLine, $ohMyPoshProfileLine } | Set-Content -Path $PROFILE -Force
         }
-        else {
-          Throw "Could not find Theme $pp['Theme'] @ $env:LocalAppDataPrograms/oh-my-posh/themes/$($p['Theme'])).omp.json";
-        }
+      } else {
+        Add-Content -Path $PROFILE -Value $ohMyPoshProfileLine -Force
       }
-      else {        
-        $OhMyPoshInProfile = $true
-      }
-    }      
-    else {
-      $newProfile += $line
+    } else {
+      Throw "Could not find Theme $themeName @ $env:LocalAppDataPrograms/oh-my-posh/themes/$($themeName).omp.json";
     }
-      
-  }
-  if (-not $OhMyPoshInProfile) {
-    if ($pp['Theme']) {
-      if (Test-Path "$env:LocalAppDataPrograms/oh-my-posh/themes/$($p['Theme'])).omp.json") {
-        $newProfile += "Invoke-Expression (oh-my-posh --init --shell pwsh --config ""$env:LocalAppDataPrograms/oh-my-posh/themes/$($p['Theme'])).omp.json"")";
-      }
-      else {
-        Throw "Could not find Theme $pp['Theme'] @ $env:LocalAppDataPrograms/oh-my-posh/themes/$($p['Theme'])).omp.json";
-      }
-    }
-    else {
-      $newProfile += 'Invoke-Expression (oh-my-posh --init --shell pwsh)`n';
-
-    }
+  } elseif (-Not($OhMyPoshInProfile)) {
+    # Add-Content -Path $PROFILE -Value 'Invoke-Expression (oh-my-posh --init --shell pwsh --config "$(scoop prefix oh-my-posh)/themes/jandedobbeleer.omp.json")';
+    Add-Content -Path $PROFILE -Value 'Set-PoshPrompt -Theme jandedobbeleer'; # Newer method of setting theme
+    Add-Content -Path $PROFILE -Value 'Use the command ''Get-PoshThemes'' to display every available theme in the current directory'
+    Add-Content -Path $PROFILE -Value '# For information about setting your oh-my-posh themes: https://ohmyposh.dev/docs/installation#3-replace-your-existing-prompt'
   }
 
-  Set-Content -path $profile -value $newProfile -Force
   Write-Host "oh-my-posh has been added to your profile. You may wish to append 'Set-PoshPrompt paradox' to set a theme"
-}
-else {
+} else {
   Write-Host 'No Powershell Profile was found. You may wish to create a Profile and append ''Invoke-Expression (oh-my-posh --init --shell pwsh --config "$env:LocalAppDataPrograms/oh-my-posh/themes/themename.omp.json")'' to enable oh-my-posh. ''Get-PoshThemes'' will list available themes for you'
 }
