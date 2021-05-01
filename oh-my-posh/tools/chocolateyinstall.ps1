@@ -1,12 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop';
 $pp = Get-PackageParameters
 
-$InstallArgs = @{
-  PackageName    = $env:ChocolateyPackageName
-  FileType       = 'exe'
-  SilentArgs     = '/VERYSILENT'
-  Url64bit       = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v3.140.1/install.exe'
-  Checksum64     = '73789d889a4e1a05c57a5cd06f438cebc82e77d05d8a02d4201874d79cc171e3a9125bcd8cfe8eaa856453ad3a0e0b545300cb1ba0f5ec339253ab2c0b7b84e8'
+
+$InstallArgs = @{ 
+  PackageName = $env:ChocolateyPackageName
+  FileType = 'exe'
+  SilentArgs = '/VERYSILENT'
+  Url64bit = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v3.144.0/install.exe'
+  Checksum64 = 'e7c4a0579bb7c766d076791d51c4b4f965396c9ab605278bf9a0d48519c702eaf96b8bf9cced2d685c2c1b6e7daaf2dfe7caa775f94200b972a40ed66e9eafe6'
   ChecksumType64 = 'sha512'
 }
 
