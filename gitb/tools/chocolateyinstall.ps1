@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$url64 = 'https://github.com/vvatanabe/gitb/releases/download/2.3.1/gitb_2.3.1_windows_amd64.zip'
-$url32 = 'https://github.com/vvatanabe/gitb/releases/download/2.3.1/gitb_2.3.1_windows_386.zip'
-$checksum64 = '14b744b10a8e9ca2989610164e161b24934e8706fecb223e9836f17725565c6526a31ab27669a75a8c952ec397090d05d0f1a2ff94bea4431ffb44dea0945b94'
-$checksum32 = '305e1a820c5519678e48f92b31c4a9defca2fff649474724d495fe2133b82e83d3f3c0ecfe62d2255d719ebb7fc7af0934e6d687039fc9125f45d96f79c1ab96'
+$url64 = 'https://github.com/vvatanabe/gitb/releases/download/2.4.0/gitb_2.4.0_windows_amd64.zip'
+$url32 = 'https://github.com/vvatanabe/gitb/releases/download/2.4.0/gitb_2.4.0_windows_386.zip'
+$checksum64 = 'f4b3f3e0b83aa451bf4664c6d286e3bc7d914843a26d98dceceed18adda4398f1b9f352fe6b2429b0d5ebced79dec677ee8d1f3a1b6bec64e9586abe2b9986bd'
+$checksum32 = '27cdac2cefe0b2530d7d76efc2b2fc565e0d3718fcc7b233034ebfa3366283b2af3e30ef4e82c8614dbe24f2b2bb2925c43b27db4b628cc19b65e78e982b9863'
 $checksumType64 = 'sha512'
 $checksumType32 = 'sha512'
 $UnzipLocation = Join-Path $env:ChocolateyInstall (Join-Path 'lib' $env:ChocolateyPackageName)
