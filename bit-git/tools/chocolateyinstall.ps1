@@ -6,10 +6,10 @@ $UnzipLocation = Join-Path $env:ChocolateyInstall (Join-Path 'lib' $env:Chocolat
 $ChocoWebFileArgs = @{
     PackageName = $env:ChocolateyPackageName
     FileFullPath = (Join-Path $UnzipLocation 'bit-git.tar.gz')
-    Url = 'https://github.com/chriswalz/bit/releases/download/v1.1.1/bit_1.1.1_windows_386.tar.gz'
-    Url64bit = 'https://github.com/chriswalz/bit/releases/download/v1.1.1/bit_1.1.1_windows_amd64.tar.gz'
-    CheckSum = 'ec640f15a5ccf6a3ef1e2997475b883d6625c0ee46c267995b25a690418edd58111409c831024139f5873da4d62dbf1461ae5f34eaef6a6adca1c3cc286ed72e'
-    Checksum64 = 'b149cdd3dee88ebf2a7c8fea46077fd0bbbbf6eee91a90df6cdc259d8f68368860a2673b52d1a40fa5063d151e29d4a0746623f04eb7aa330c3e31634eba8618'
+    Url = 'https://github.com/chriswalz/bit/releases/download/v1.1.2/bit_1.1.2_windows_386.tar.gz'
+    Url64bit = 'https://github.com/chriswalz/bit/releases/download/v1.1.2/bit_1.1.2_windows_amd64.tar.gz'
+    CheckSum = '787cd26fe7cba3acecb5c59a5ce34e759b87365d49f44e3a799573ece29461a0776ccd3cb556a2959bfad77576a722c4f44f032b52ff940b3477570dd6d1152f'
+    Checksum64 = '3ed09d8cf4eda299af06095ef731b409e305023a28d119013bef3d748811e7a2dccb1149b214091729ea4fefaebc9c4ffd5b94d9f3769731aa2b9cc0488f7dea'
     CheckSumType = 'sha512'
     ChecksumType64 = 'sha512'
 }
