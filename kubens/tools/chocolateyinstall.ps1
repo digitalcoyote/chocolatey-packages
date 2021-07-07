@@ -3,8 +3,8 @@
 $ZipInstallArgs = @{
     PackageName = $env:ChocolateyPackageName 
     UnzipLocation = Join-Path $env:ChocolateyInstall (Join-Path 'lib' $env:ChocolateyPackageName)
-    Url64 = 'https://github.com/ahmetb/kubectx/releases/download/v0.9.3/kubens_v0.9.3_windows_x86_64.zip'
-    CheckSum64 = 'bcacdd3d2d7cf1f733c4fb705718561fc0e2aef93d3ea15ef665af0d70cf24018e57abc349959c3bcc5d57c98040cfffbb4b7f0937bb0d697ed558c7c484bc1c'
+    Url64 = 'https://github.com/ahmetb/kubectx/releases/download/v0.9.4/kubens_v0.9.4_windows_x86_64.zip'
+    CheckSum64 = '4be4d3b157c6c07e6fb77ac0ab4c8cafe9c92f99104c0406c554bf205f4378a98d184197c27b43e3ef1c33fd5b368effd53ac9ed6a4b8134925af5040e6cde52'
     CheckSumType64 = 'sha512'
 }
 
