@@ -3,8 +3,8 @@
 $ZipInstallArgs = @{
     PackageName = $env:ChocolateyPackageName 
     UnzipLocation = Join-Path $env:ChocolateyInstall (Join-Path 'lib' $env:ChocolateyPackageName)
-    Url64 = 'https://github.com/NethermindEth/nethermind/releases/download/1.10.75/nethermind-windows-amd64-1.10.75-3100374-20210709.zip'
-    CheckSum64 = '9ca3877325e8401edbd3f5d2bdaf950778eae718e7aaa9a3092763b86ec2995658367bb02a06c4ab50c1cf27791af21d94dc691351cef4aad279deb1168056b2'
+    Url64 = 'https://github.com/NethermindEth/nethermind/releases/download/1.10.77/nethermind-windows-amd64-1.10.77-8eaabaa-20210713.zip'
+    CheckSum64 = 'c52c1f306158f9eb1b6d5ceac0628c5306807d3417b1322eaec20a204e345cd81bb72ccb91753a73d3e713b156b331b2d910d39fa6f7e7cf729a8de83d48f50f'
     CheckSumType64 = 'sha512'
 }
 
