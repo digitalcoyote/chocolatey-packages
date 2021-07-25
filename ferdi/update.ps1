@@ -14,7 +14,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $regex   = '\/getferdi\/ferdi\/releases\/download\/v\d{1,4}\.\d{1,4}\.\d{1,4}.*\/Ferdi-Setup-.*\.exe$'
+  $regex   = '\/getferdi\/ferdi\/releases\/download\/v\d{1,4}\.\d{1,4}\.\d{1,4}.*\/Ferdi-.*\.exe$'
   $url     = $download_page.links | Where-Object href -match $regex | Select-Object -First 1 -expand href
   $version = $url -split '\/|v' | Select-Object -Last 1 -Skip 1
   $url = "https://github.com$url"
