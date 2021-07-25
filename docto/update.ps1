@@ -17,7 +17,7 @@ function global:au_GetLatest {
   $regex   = '/tobya/DocTo/tree/[vV][0-9]{1,4}\.{0,1}[0-9]{0,4}\.{0,1}[0-9]{0,4}.*'
   $url = $download_page.links | Where-Object href -match $regex | Select-Object -First 1 -expand href
   $version = $url -split '\/|V' | Select-Object -Last 1
-  $url = "https://github.com/tobya/DocTo/releases/download/V$version/docto.zip"
+  $url = "https://github.com/tobya/DocTo/releases/download/V$version/docto$($version.Replace('.', '0')).zip"
 
   return @{ Version = $version; URL = $url; ChecksumType32 = 'sha512';}
 }
