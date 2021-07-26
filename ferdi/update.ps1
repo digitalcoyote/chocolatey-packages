@@ -17,7 +17,6 @@ function global:au_GetLatest {
   $regex   = '\/getferdi\/ferdi\/releases\/download\/v\d{1,4}\.\d{1,4}\.\d{1,4}.*\/Ferdi-.*\.exe$'
   $url     = $download_page.links | Where-Object href -match $regex | Select-Object -First 1 -expand href
   $version = $url -split '\/|v' | Select-Object -Last 1 -Skip 1
-  $url = "https://github.com$url"
   $releaseNotes = "https://github.com/getferdi/ferdi/releases/tag/v$version"
 
   return @{ Version = $version; URL64 = $url; ChecksumType64 = 'sha512'; ReleaseNotes = $releaseNotes}
