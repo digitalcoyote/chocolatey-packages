@@ -6,10 +6,10 @@ $UnzipLocation = Join-Path $env:ChocolateyInstall (Join-Path 'lib' $env:Chocolat
 $ChocoWebFileArgs = @{
     PackageName = $env:ChocolateyPackageName
     FileFullPath = (Join-Path $UnzipLocation 'buffalo.tar.gz')
-    Url = 'https://github.com/gobuffalo/buffalo/releases/download/v0.16.26/buffalo_0.16.26_windows_i386.tar.gz'
-    Url64bit = 'https://github.com/gobuffalo/buffalo/releases/download/v0.16.26/buffalo_0.16.26_windows_x86_64.tar.gz'
-    CheckSum = '9cf2fc696b48e5150f1b7ea327f17af850a90fbc1b8eb8c8dfc1003a6779b0b09f81a480076f5050d76a742c1623ee025c498ee488f68a28ab419ef0d79b3538'
-    Checksum64 = 'bca42df1c42d87a50f14d7681887067203efcdbca35a6b7e39ca2ef8d6163f9fb871848db13ce5ca913959da77458dfa8e7c8bb5d642aa0c54cb0ee41789e382'
+    Url = 'https://github.com/gobuffalo/buffalo/releases/download/v0.16.27/buffalo_0.16.27_windows_i386.tar.gz'
+    Url64bit = 'https://github.com/gobuffalo/buffalo/releases/download/v0.16.27/buffalo_0.16.27_windows_x86_64.tar.gz'
+    CheckSum = 'b5f2c64f324d464d1847352fce2b9a5eed209a97d85ee8a8df3b7f0c9e649ccab2e26b17579f4f0b61e8ef744d940943c985ad529c4f22af0da8d467dd589a72'
+    Checksum64 = 'cf421beec007de0af24e388389b880f9f5fb8fb3afac471a2d026c6e34d34fe31ce004e39244c895ddfa4f5b9f894bdb9c0a6e9209aaf445b313590e0109f412'
     CheckSumType = 'sha512'
     ChecksumType64 = 'sha512'
 }
