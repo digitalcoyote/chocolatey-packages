@@ -4,8 +4,8 @@ $args = @{
   PackageName = $env:ChocolateyPackageName
   FileType = 'exe'
   SilentArgs = '/VERYSILENT'
-  Url64bit = 'https://github.com/authpass/authpass/releases/download/v1.9.1/AuthPass-setup-1.9.1_1813.exe'
-  Checksum64 = 'e29d338d50ade5cfe02e911d11fcb735725cf65290ffccde48e109527d63e9e815a5ef2771b9db5cd3b10e845b8964c99c668f688a04b7d8cb1e321c7ed2cb4e'
+  Url64bit = 'https://github.com/authpass/authpass/releases/download/v1.9.2/AuthPass-setup-1.9.2_1834.exe'
+  Checksum64 = '50e52bc1a255cc005d8e058e1a7a65aa3693ea4785657169172e021925a2bac0d5e7a4aaec2e7d9238189141c60bf60b30968ed657129465d29eadcb00523e79'
   ChecksumType64 = 'sha512'
 }
 
