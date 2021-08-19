@@ -7,7 +7,7 @@ $InstallArgs = @{
   FileType = 'exe'
   SilentArgs = '/VERYSILENT'
   Url64bit = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v3.174.0/install.exe'
-  Checksum64 = ''
+  Checksum64 = 'c7d7809774c5df8ef2388a50417530610beb766b859702047dd11fb7a711814208cdb94b932d4aafe90abea39c1e92c8bfe14e976249b4440513133139a13a58'
   ChecksumType64 = 'sha512'
 }
 
