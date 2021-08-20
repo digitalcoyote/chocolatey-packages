@@ -6,8 +6,8 @@ $InstallArgs = @{
   PackageName = $env:ChocolateyPackageName
   FileType = 'exe'
   SilentArgs = '/VERYSILENT'
-  Url64bit = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v3.144.0/install.exe'
-  Checksum64 = 'e7c4a0579bb7c766d076791d51c4b4f965396c9ab605278bf9a0d48519c702eaf96b8bf9cced2d685c2c1b6e7daaf2dfe7caa775f94200b972a40ed66e9eafe6'
+  Url64bit = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v3.174.0/install.exe'
+  Checksum64 = ''
   ChecksumType64 = 'sha512'
 }
 
@@ -43,7 +43,9 @@ if (Test-Path $profile) {
         Add-Content -Path $profile -Value 'Use the command ''Get-PoshThemes'' to display every available theme in the current directory'
         Add-Content -Path $profile -Value '# For information about setting your oh-my-posh themes: https://ohmyposh.dev/docs/installation#3-replace-your-existing-prompt'
     }
-  } elseif (-Not($OhMyPoshInProfile)) {
+  } else
+  {
+  if (-Not($OhMyPoshInProfile)) {
     # Add-Content -Path $PROFILE -Value 'Invoke-Expression (oh-my-posh --init --shell pwsh --config "$(scoop prefix oh-my-posh)/themes/jandedobbeleer.omp.json")';
     Add-Content -Path $PROFILE -Value 'Set-PoshPrompt -Theme jandedobbeleer'; # Newer method of setting theme
     Add-Content -Path $PROFILE -Value 'Use the command ''Get-PoshThemes'' to display every available theme in the current directory'
