@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>buildozer</id>
+    <version>1.10.1</version>
+    <packageSourceUrl>https://github.com/digitalcoyote/chocolatey-packages/tree/master/buildozer</packageSourceUrl>
+    <owners>CodingCoyote</owners>
+    <title>Buildozer</title>
+    <authors>bazelbuild</authors>
+    <projectUrl>https://github.com/bazelbuild/buildtools/tree/master/buildozer</projectUrl>
+    <!-- <iconUrl></iconUrl> -->
+    <licenseUrl>https://github.com/bazelbuild/buildtools/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/bazelbuild/buildtools/tree/master/buildozer</projectSourceUrl>
+    <docsUrl>https://github.com/bazelbuild/buildtools/blob/master/buildozer/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/bazelbuild/buildtools/issues</bugTrackerUrl>
+    <tags>buildtools bazel build buildozer</tags>
+    <summary>Buildozer is a command line tool to rewrite multiple Bazel BUILD files using standard commands.</summary>
+    <description># Buildozer
+
+Buildozer is a command line tool to rewrite multiple
+[Bazel](https://github.com/bazelbuild/bazel) BUILD files using
+standard commands.
+
+## Usage
+
+```shell
+buildozer [OPTIONS] ['command args' | -f FILE ] label-list
+```
+
+Here, `label-list` is a space-separated list of Bazel labels, for example
+`//path/to/pkg1:rule1 //path/to/pkg2:rule2`.
+
+When `-f FILE` is used, buildozer reads commands from `FILE` (`-` for stdin).
+Format: lines of `|`-separated sets of commands and labels (`command args|label|label...`).
+When the label is a single '*', then the command will be applied to all
+elements of label-list from the command line.
+
+You should specify at least one command and one target. Buildozer will execute
+all commands on all targets. Commands are executed in order, files are processed
+in parallel.
+
+### Targets
+
+Targets look like Bazel labels, but there can be some differences in presence of
+macros.
+
+  * Use the label notation to refer to a rule: `//buildtools/buildozer:edit`
+  * Use the `__pkg__` suffix to refer to the package declaration:
+   `//buildtools/buildozer:__pkg__`
+  * Use an asterisk to refer to all rules in a file: `//pkg:*`
+  * Use `...` to refer to all descendant BUILD files in a directory: `//pkg/...:*`
+  * Use percent to refer to all rules of a certain kind: `//pkg:%java_library`
+  * Use percent-and-number to refer to a rule that begins at a certain line:
+   `//pkg:%123`.
+  * Use `-` for the package name if you want to process standard input stream
+   instead of a file: `-:all_tests`.</description>
+<releaseNotes>https://github.com/bazelbuild/buildtools/releases/</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
