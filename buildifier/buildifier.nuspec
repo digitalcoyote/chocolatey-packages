@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>buildifier</id>
+    <version>1.10.1</version>
+    <packageSourceUrl>https://github.com/digitalcoyote/chocolatey-packages/tree/master/buildifier</packageSourceUrl>
+    <owners>CodingCoyote</owners>
+    <title>buildifier</title>
+    <authors>bazelbuild</authors>
+    <projectUrl>https://github.com/bazelbuild/buildtools/tree/master/buildifier</projectUrl>
+    <!-- <iconUrl></iconUrl> -->
+    <licenseUrl>https://github.com/bazelbuild/buildtools/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/bazelbuild/buildtools/tree/master/buildifier</projectSourceUrl>
+    <docsUrl>https://github.com/bazelbuild/buildtools/blob/master/buildifier/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/bazelbuild/buildtools/issues</bugTrackerUrl>
+    <tags>buildtools bazel build buildifier</tags>
+    <summary>A tool for formatting BUILD, BUILD.bazel and BUCK files in a standard way</summary>
+    <description># Buildifier
+
+buildifier is a tool for formatting bazel BUILD and .bzl files with a standard convention.
+
+## Usage
+
+Use buildifier to create standardized formatting for BUILD and .bzl files in the
+same way that clang-format is used for source files.
+
+    $ buildifier path/to/file
+
+You can also process multiple files at once:
+
+    $ buildifier path/to/file1 path/to/file2
+
+You can make buildifier automatically find all Starlark files (i.e. BUILD, WORKSPACE, .bzl, or .sky)
+in a directory recursively:
+
+    $ buildifier -r path/to/dir
+
+Buildifier supports the following file types: `BUILD`, `WORKSPACE`, `.bzl`, and
+default, the latter is reserved for Starlark files buildifier doesn't know about
+(e.g. configuration files for third-party projects that use Starlark). The
+formatting rules for WORKSPACE files are the same as for BUILD files (both are
+declarative and have stricter formatting rules), and default files are formatted
+similarly to .bzl files, allowing more flexibility. Different linter warnings
+may be limited to any subset of these file types, e.g. a certain warning may be
+only relevant to Bazel files (i.e. `BUILD`, `WORKSPACE`, and `.bzl`) or to
+non-WORKSPACE files.
+
+Buildifier automatically detects the file type by its filename, taking into
+account optional prefixes and suffixes, e.g. `BUILD`, `BUILD.oss`, or
+`BUILD.bazel` will be detected as BUILD files, and `build_defs.bzl.oss` is a
+.bzl file. Files with unknown names (e.g. `foo.bar`) or files passed via stdin
+will be treated as default file type. To override the automatic file type
+detection use the `--type` flag explicitly:
+
+    $ cat foo.bar | buildifier --type=build
+    $ cat foo.bar | buildifier --type=bzl
+    $ cat foo.bar | buildifier --type=workspace
+    $ cat foo.bar | buildifier --type=default</description>
+<releaseNotes>https://github.com/bazelbuild/buildtools/releases/</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
