@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>unused-deps</id>
+    <version>1.10.1</version>
+    <packageSourceUrl>https://github.com/digitalcoyote/chocolatey-packages/tree/master/unused_deps</packageSourceUrl>
+    <owners>CodingCoyote</owners>
+    <title>unused_deps</title>
+    <authors>bazelbuild</authors>
+    <projectUrl>https://github.com/bazelbuild/buildtools/tree/master/unused_deps</projectUrl>
+    <!-- <iconUrl></iconUrl> -->
+    <licenseUrl>https://github.com/bazelbuild/buildtools/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/bazelbuild/buildtools/tree/master/unused_deps</projectSourceUrl>
+    <docsUrl>https://github.com/bazelbuild/buildtools/blob/master/unused_deps/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/bazelbuild/buildtools/issues</bugTrackerUrl>
+    <tags>buildtools bazel build unused_deps buildozer</tags>
+    <summary>unused_deps is a command line tool to determine any unused dependencies in java_library rules. targets.</summary>
+    <description># Unused Deps
+
+unused_deps is a command line tool to determine any unused dependencies
+in [java_library](https://docs.bazel.build/versions/master/be/java.html#java_library)
+rules. targets.  It outputs `buildozer` commands to apply the suggested
+prunings.
+    
+    ## Usage
+
+```shell
+unused_deps TARGET...
+```
+
+Here, `TARGET` is a space-separated list of Bazel labels, with support for `:all` and `...`</description>
+<releaseNotes>https://github.com/bazelbuild/buildtools/releases/</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
