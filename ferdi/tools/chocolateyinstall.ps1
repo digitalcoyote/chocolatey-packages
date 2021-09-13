@@ -4,8 +4,8 @@ $args = @{
   PackageName = $env:ChocolateyPackageName
   FileType = 'exe'
   SilentArgs = '/S'
-  Url64bit = 'https://github.com/getferdi/ferdi/releases/download/v5.6.1/Ferdi-5.6.1.exe'
-  Checksum64 = '3781ae56da5cd69f6255d18fba97dcd4343bdcca26e0d503bb3d6696ac9fc113fb2d96feca506514a06249db19a5ec42de72b3ea554841ecedf77cfff339eda8'
+  Url64bit = 'https://github.com/getferdi/ferdi/releases/download/v5.6.2/Ferdi-5.6.2.exe'
+  Checksum64 = 'db51ce229955bc2c898d0cf62065353502f6f2bd03eb00de4c46b24bc1f0aca4286c9a5d65b3243ec704b9be726cc31dbc062c0a929ca0281b47048e71311480'
   ChecksumType64 = 'sha512'
 }
 
