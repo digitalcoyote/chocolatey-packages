@@ -3,8 +3,8 @@
 $InstallArgs = @{
     PackageName = $env:ChocolateyPackageName
     FileFullPath = Join-Path (Join-Path $env:ChocolateyInstall (Join-Path 'lib' $env:ChocolateyPackageName)) 'dip.exe'
-    URL = 'https://github.com/030/dip/releases/download/4.0.1/dip-windows-2019'
-    Checksum = 'b7d82b60dce9efc633dedc2740421cb6588f24700e1c72dfddcea4ee3480fdce4c0e7723d2074826ff8bc7bd0bc25770780f834b6a44674bff282577ddac54a6'
+    URL = 'https://github.com/030/dip/releases/download/4.0.2/dip-windows-2019'
+    Checksum = '7073b55f20c61f8e28e5ec7952f497c800a54afb2b8841fa6824cd308203b95ea8d27a0293b907a84f06536f76f0bfe8195bc906c76e9ffd64dadd9769f7f19e'
     ChecksumType = 'sha512'
 }
 
