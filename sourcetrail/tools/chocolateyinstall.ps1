@@ -3,8 +3,8 @@ $ZipFile = Join-Path (Join-Path $env:ChocolateyInstall (Join-Path 'lib' $env:Cho
 $InstallChocolateyZipPackageArgs = @{
     PackageName = $env:ChocolateyPackageName
     UnzipLocation = $ZipFile
-    Url64Bit = 'https://github.com/CoatiSoftware/Sourcetrail/releases/download/2021.1.30/Sourcetrail_2021_1_30_Windows_64bit_Installer.zip'
-    Checksum64 = 'ef3c43a71c49ec9b01691a48cf4e602e2d3082c92bb502cb8afe60cacc867331325b1817fddf1b1ed2cf17309b043f2cae05c65b8817f9df12cbb99a4eecab5f'
+    Url64Bit = 'https://github.com/CoatiSoftware/Sourcetrail/releases/download/2021.4.19/Sourcetrail_2021_4_19_Windows_64bit_Installer.zip'
+    Checksum64 = 'a8efd38d3b177a09bc859eaf13ac9fc06f142ea2dcf10feb37f8aa55f4d72a9b7334531c4bcf686af43c249f7e463734039d5ab6b9c94a427a1c39828bd7463a'
     CheckSumType64 = 'sha512'
 }
 
