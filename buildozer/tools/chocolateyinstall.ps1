@@ -2,9 +2,9 @@
 
 $InstallArgs = @{
     PackageName = $env:ChocolateyPackageName
-    URL64 = 'https://github.com/bazelbuild/buildtools/releases/download/4.2.3/buildozer-windows-amd64.exe'
+    URL64 = 'https://github.com/bazelbuild/buildtools/releases/download/4.2.4/buildozer-windows-amd64.exe'
     FileFullPath = Join-Path (Join-Path $env:ChocolateyInstall (Join-Path 'lib' $env:ChocolateyPackageName)) 'buildozer.exe'
-    Checksum64 = '9bff2b81684409af952756809218c75d9ca8e50f9425b7c732206b966377e8385f978fb63943fad2d26d7202056f59e822c99d9b21f20b87b2ebdc558d348e86'
+    Checksum64 = '46dca44a2875dd16440abda1aafb47d3711fc2d6f2f21fc8d840447e4f4c1ec17a66d0987b0659f9b07a776b472f25a8bf1846b8394aa3e462ca6519f1b1f383'
     ChecksumType64 = 'sha512'
 }
 
