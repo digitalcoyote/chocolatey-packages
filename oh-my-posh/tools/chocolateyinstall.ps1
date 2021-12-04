@@ -6,8 +6,8 @@ $InstallArgs = @{
     PackageName    = $env:ChocolateyPackageName
     FileType       = 'exe'
     SilentArgs     = '/VERYSILENT'
-    Url64bit       = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v6.23.2/install-amd64.exe'
-    Checksum64     = '1553155ce30d9524c21e32a7d6087839172e559d68013cd5d4a8011138c26976ad83f90a4246db1b9bd8aa4f9d83b6f8f956367ace886dedced4f5f43068621a'
+    Url64bit       = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v6.25.0/install-amd64.exe'
+    Checksum64     = 'e93818b38cdfa26e3ef4c7522f7a7b0619c8765e88810c6fd765d8755f9ce3d1d133dc482e29b572521289dcd7eb1f890c3a9796363e57a9602f7c66394cefe6'
     ChecksumType64 = 'sha512'
 }
 
