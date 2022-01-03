@@ -4,10 +4,10 @@ $args = @{
   PackageName = $env:ChocolateyPackageName
   FileType = 'msi'
   SilentArgs = '/qn'
-  Url64bit = 'https://github.com/getferdi/ferdi/releases/download/v5.6.7/Ferdi-5.6.7.msi'
-  Url = 'https://github.com/getferdi/ferdi/releases/download/v5.6.7/Ferdi-5.6.7-ia32.msi'
-  Checksum64 = 'e7c63bdec942d160e60d50c17d78ae9568380698b426182c73fde1e3a8fd2f25b3af9f878c2dd3baceb1d69d4451a824e579d21899072c25b68f9fde639c4e87'
-  Checksum = 'e78f3ee8c286d72c577083fa94db96c62d356e358d11316b6f7a36c39a3310b28945489dfcfd173f3c00b2c42c5d24b6ec08c2fe6288508b22124b75f9971374'
+  Url64bit = 'https://github.com/getferdi/ferdi/releases/download/v5.6.8/Ferdi-5.6.8.msi'
+  Url = 'https://github.com/getferdi/ferdi/releases/download/v5.6.8/Ferdi-5.6.8-ia32.msi'
+  Checksum64 = '8765a2b4b0231e9708b31b54a034fc9b48bc3ce7f2a14d571b7255c2d95f666a3e6840db41e601613f8fa5cec4083fd58e36ec821c5c354c35a2979729c1ece6'
+  Checksum = 'b932871316824b41530cf958ea8db27c8640ecc9e6a903f44d13d53a5b83f042ef29c3214e617aeb4ee23c2227dbfb090faa4009a3a782976e4a11085205cc8e'
   ChecksumType64 = 'sha512'
   ChecksumType = 'sha512'
 }
