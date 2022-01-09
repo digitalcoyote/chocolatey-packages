@@ -5,8 +5,8 @@ $InstallArgs = @{
     PackageName = $env:ChocolateyPackageName
     FileType = 'exe'
     SilentArgs = $installDir
-    URL = 'http://malsmith.net/download?obj=yori/1.60/win32/ysetup.exe'
-    Checksum = 'a2a3de85e225d598fc06b0da053b832eea277a9cd7f945a6a2800e62a2f0f3a8'
+    URL = 'http://malsmith.net/download?obj=yori/1.70/win32/ysetup.exe'
+    Checksum = '45b23f8b6eebfaaa7f429f1b116419e85ea738e079229d61ee4f331e5bc0d387'
     ChecksumType = 'sha256'
 }
 
