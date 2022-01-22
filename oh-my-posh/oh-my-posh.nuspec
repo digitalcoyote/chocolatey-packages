@@ -26,7 +26,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>6.51.0</version>
+    <version>7.5.1</version>
     <packageSourceUrl>https://github.com/digitalcoyote/chocolatey-packages</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>codingcoyote</owners>
@@ -49,39 +49,22 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <tags>powershell oh-my-posh posh conemu</tags>
     <summary>Oh my Posh is a custom prompt engine for any shell that has the ability to adjust the prompt string with a function or variable.</summary>
     <description>## Introduction
-Oh my Posh is a custom prompt engine for any shell that has the ability to adjust the prompt string with a function or variable.
+What started as the offspring of oh-my-posh2 for PowerShell resulted in a cross platform, highly customizable and extensible prompt theme engine. After 4 years of working on oh-my-posh, a modern and more efficient tool was needed to suit my personal needs.
 
-## Oh my Posh 3 vs [Oh my Posh 2](https://ohmyposh.dev/docs/#oh-my-posh-3-vs-oh-my-posh-2)
-Oh my Posh 3 is the offspring of [Oh my Posh](https://github.com/JanDeDobbeleer/oh-my-posh2), a prompt theme engine for PowerShell. Oh my Posh started out by being inspired from tools like [oh my zsh](https://github.com/ohmyzsh/ohmyzsh) when nothing was available specifically for PowerShell.
+## Features
+* Shell independent
+* Git status indications
+* Failed command indication
+* Admin indication
+* Current session indications
+* Language info
+* Shell info
+* Configurable
+* Fast
 
-Over the years, I switched operating system/main shell quite a lot, even on Windows via the WSL. This made it so that my prompt wasn't portable enough, I wanted the same visual/functional experience regardless of the shell I was working in. Hello world Oh my Posh 3!
-
-## Concept
-Traditionally, prompt tools work with custom scripts per theme (just like Oh my Posh did) or a lot of CLI configuration switches to define what it looks like. With Oh my Posh, I wanted to start from a single configuration file that could easily be shared anywhere, removing the need to really grasp what goes on underneath.
-
-When you look at prompts like Agnoster or Paradox, you notice they usually consist of a few building blocks which contain one or more segments that display some sort of information. The configuration of Oh my Posh works exactly like that. Blocks are a combination of one or more segments.
-
-The basic layout of the config file is as follows.
-```
-{
-    "blocks": []
-}
-```
-A [block](https://ohmyposh.dev/docs/configure#block) has properties that indicate its position and the [segments](https://ohmyposh.dev/docs/configure#segment) it will render.
-```
-{
-    "blocks": [
-        {
-            // positioning metadata (not shown)
-            "segments": []
-        }
-    ]
-}
-```
-A [segment](https://ohmyposh.dev/docs/configure#segment) renders a single context like showing the current folder, user information or git status when relevant. It can be styled any way you want, resulting in visualizing the prompt you are looking for.
-
-For your convenience, the existing [themes](https://github.com/JanDeDobbeleer/oh-my-posh/tree/main/themes) from Oh my Posh have been added to version 3, so you can get started even without having to understand the theming. So, let's no longer waste time on theory, have a look at the [configuration guide](https://ohmyposh.dev/docs/configure) to get started right away!
-</description>
+## Virus Scan Results
+There are some false positives associated with Oh-My-Posh and they are being tracked in [Issue 767](https://github.com/JanDeDobbeleer/oh-my-posh/issues/767)
+ and is a somewhat common issue with programs written in Go. </description>
     <releaseNotes>https://github.com/JanDeDobbeleer/oh-my-posh/releases</releaseNotes>
     <!-- =============================== -->      
 
