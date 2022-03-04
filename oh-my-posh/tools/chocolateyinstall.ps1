@@ -1,11 +1,11 @@
-﻿$ErrorActionPreference = 'Stop';
+$ErrorActionPreference = 'Stop';
 $pp = Get-PackageParameters
 
 
 $InstallArgs = @{ 
     PackageName    = $env:ChocolateyPackageName
     FileType       = 'exe'
-    SilentArgs     = '/VERYSILENT /CURRENTUSER'
+    SilentArgs     = '/VERYSILENT ' + if($pp['ALLUSERS']) '/ALLUSERS' else '/CURRENTUSER'
     Url64bit       = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v7.31.1/install-amd64.exe'
     Checksum64     = '811b0dbf9fd9fb99b436b2ea65e3c6abd5b38943798b465043ba4d99c8bf00257b7e7be23f56d7232d04c7cdcfac9be168a2099d17bed7b597c6d712a4716ddf'
     ChecksumType64 = 'sha512'
