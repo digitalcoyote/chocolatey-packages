@@ -43,7 +43,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <licenseUrl>https://github.com/denoland/deno/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/denoland/deno</projectSourceUrl>
-    <docsUrl>https://deno.land/manual.html</docsUrl>
+    <docsUrl>https://deno.land/manual</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
     <bugTrackerUrl>https://github.com/denoland/deno/issues</bugTrackerUrl>
     <authors>https://github.com/denoland/deno/contributors</authors>
