@@ -5,8 +5,8 @@ $pp = Get-PackageParameters
 $InstallArgs = @{ 
     PackageName    = $env:ChocolateyPackageName
     FileType       = 'exe'
-    Url64bit       = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v7.46.1/install-amd64.exe'
-    Checksum64     = 'b40fdc1e62481d56d278f74b3c361fb924ff5eaf01953ba2cfcf7007f72e9f8a589b694fd3943543af7bad58a952da62fc684753708d2d735038929151f70aa6'
+    Url64bit       = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v7.46.2/install-amd64.exe'
+    Checksum64     = '89a5701a2f5a581784be037cb1fc61be566004474ae3a8657730b4a8c31f36cca908478b14751b60b48eae713939784d0ec6d8fe947416fa2e420b9cd9ca28a1'
     SilentArgs     = "/VERYSILENT ${if($pp['ALLUSERS']) '/ALLUSERS' else '/CURRENTUSER'}"
     ChecksumType64 = 'sha512'
 }
