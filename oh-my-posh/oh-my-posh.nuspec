@@ -37,6 +37,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <title>Oh-My-Posh</title>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://ohmyposh.dev/</projectUrl>
+    <iconUrl>https://rawcdn.githack.com/jandedobbeleer/oh-my-posh/19b8cf2cf8401bba068f7d417a4fcc33947c64f2/docs/static/img/logo.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/COPYING</licenseUrl>
@@ -66,7 +67,7 @@ What started as the offspring of oh-my-posh2 for PowerShell resulted in a cross 
 There are some false positives associated with Oh-My-Posh and they are being tracked in [Issue 767](https://github.com/JanDeDobbeleer/oh-my-posh/issues/767)
  and is a somewhat common issue with programs written in Go. </description>
     <releaseNotes>https://github.com/JanDeDobbeleer/oh-my-posh/releases</releaseNotes>
-    <!-- =============================== -->      
+    <!-- =============================== -->
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
     <dependencies>
