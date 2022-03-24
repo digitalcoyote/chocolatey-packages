@@ -1,12 +1,20 @@
 ﻿$ErrorActionPreference = 'Stop';
 $pp = Get-PackageParameters
 
+$silentArgs = "/VERYSILENT";
+
+if ($pp['ALLUSERS']) {
+    $silentArgs = "$silentArgs /ALLUSERS"
+}
+else {
+    $silentArgs = "$silentArgs /CURRENTUSER"
+}
 
 $InstallArgs = @{ 
     PackageName    = $env:ChocolateyPackageName
     FileType       = 'exe'
-    Url64bit       = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v7.47.0/install-amd64.exe'
-    Checksum64     = '3410df68f82c31283848abefc711fb772676b5bfc523a52fb32918ca4bccec48bf347393bfbf600d1afdc2dcdc9900dbbd5e7b8f27cd89bab8b738c33b332e99'
+    Url64bit       = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v7.46.2/install-amd64.exe'
+    Checksum64     = '89a5701a2f5a581784be037cb1fc61be566004474ae3a8657730b4a8c31f36cca908478b14751b60b48eae713939784d0ec6d8fe947416fa2e420b9cd9ca28a1'
     SilentArgs     = "/VERYSILENT ${if($pp['ALLUSERS']) '/ALLUSERS' else '/CURRENTUSER'}"
     ChecksumType64 = 'sha512'
 }
