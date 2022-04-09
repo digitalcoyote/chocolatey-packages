@@ -19,6 +19,7 @@
     <description>Winpinator is an unofficial Windows port of a Linux file transfer tool called Warpinator. It provides all features of its Linux equivalent, however, Windows uses its own filesystem called NTFS and is generally architecturally different, hence Winpinator has to emulate some Linux features, like permission system. Winpinator should work out-of-the-box, it makes use of zeroconf networking, i.e. mDNS protocol, but some firewall settings might prevent it from communicating with the rest of the network.
 
 The main goal of the project was to create a tool that provides native Windows look-and-feel, so the interface uses default system skin and supports drag-and-drop.</description>
+    <ReleaseNotes>https://github.com/swiszczoo/winpinator/releases</ReleaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
