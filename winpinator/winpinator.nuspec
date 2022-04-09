@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>winpinator</id>
+    <version>0.1.2</version>
+    <packageSourceUrl>https://github.com/digitalcoyote/chocolatey-packages</packageSourceUrl>
+    <owners>CodingCoyote</owners>
+    <title>Winpinator</title>
+    <authors>Łukasz Świszcz</authors>
+    <projectUrl>https://winpinator.swisz.cz</projectUrl>
+    <iconUrl>https://rawcdn.githack.com/swiszczoo/winpinator/ee1ffc5a1acd11df9479b7baaea87dc987d2eea8/art/icon.svg</iconUrl>
+    <licenseUrl>https://raw.githubusercontent.com/swiszczoo/winpinator/master/COPYING.md</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/swiszczoo/winpinator</projectSourceUrl>
+    <docsUrl>https://winpinator.swisz.cz/index.html</docsUrl>
+    <bugTrackerUrl>https://github.com/swiszczoo/winpinator/issues</bugTrackerUrl>
+    <tags>warpinator warpinator</tags>
+    <summary>Anofficial Windows port of a Linux file transfer tool called Warpinator.</summary>
+    <description>Winpinator is an unofficial Windows port of a Linux file transfer tool called Warpinator. It provides all features of its Linux equivalent, however, Windows uses its own filesystem called NTFS and is generally architecturally different, hence Winpinator has to emulate some Linux features, like permission system. Winpinator should work out-of-the-box, it makes use of zeroconf networking, i.e. mDNS protocol, but some firewall settings might prevent it from communicating with the rest of the network.
+
+The main goal of the project was to create a tool that provides native Windows look-and-feel, so the interface uses default system skin and supports drag-and-drop.</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
