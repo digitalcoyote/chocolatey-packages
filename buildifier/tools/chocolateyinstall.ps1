@@ -3,8 +3,8 @@
 $InstallArgs = @{
     PackageName = $env:ChocolateyPackageName
     FileFullPath = Join-Path (Join-Path $env:ChocolateyInstall (Join-Path 'lib' $env:ChocolateyPackageName)) 'buildifier.exe'
-    URL64 = 'https://github.com/bazelbuild/buildtools/releases/download/5.0.1/buildifier-windows-amd64.exe'
-    Checksum64 = '35c6060411a3f1e8e90af0211a0e2dc4a5fb1cb37b13b2922d5b6042ea30becc4dfc1107d65223138dcff9595d7dd4cdda542256fd14373aa5efe72412bf3735'
+    URL64 = 'https://github.com/bazelbuild/buildtools/releases/download/5.1.0/buildifier-windows-amd64.exe'
+    Checksum64 = '83ae999b96c95089da5a3b8e31923bf2d31f1d829d8815f4bd7819ca0fb2a165eca661ea82845bdd8d83c075e9f7156a08defe54f478f993192061079795cd56'
     ChecksumType64 = 'sha512'
 }
 
