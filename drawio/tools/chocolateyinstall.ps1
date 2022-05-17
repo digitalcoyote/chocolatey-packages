@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$drawioversion = '18.0.4'
+$drawioversion = '18.0.6'
 $url        = "https://github.com/jgraph/drawio-desktop/releases/download/v$drawioversion/draw.io-$drawioversion-windows-installer.exe"
 
 $packageArgs = @{
@@ -10,7 +10,7 @@ $packageArgs = @{
   #file          = "$toolsDir/draw.io-11.1.4-windows-installer.exe"
   url           = $url
   softwareName  = 'drawio*'
-  checksum      = '7d09d73034e21385e96ad8f8fa5d8eaf68bfe175a817060d83f7108b56085bace6dc264d42f216c895f9aa3dda98f17311d3e0ed1878aa9e66133a9a972156cf'
+  checksum      = 'f852542864556f09206e7876361df6fc24b7f08a0301a5c6051f60869a7d0f24a417fa9ebe92d6122c67b2f118fd56184c2c1f08a8e682503b631ad14eb53c6e'
   checksumType  = 'sha512'
   silentArgs   = '/S'
 }
