@@ -63,6 +63,9 @@ What started as the offspring of oh-my-posh2 for PowerShell resulted in a cross 
 * Configurable
 * Fast
 
+## Package Specific Flags
+Versions after 8.5.0 default to Installing for All Users. Flag `CURRENTUSER` can be used to install only for the current user. See [Issue 34 on the package repo](https://github.com/digitalcoyote/chocolatey-packages/issues/34) for more info on why this change was made.
+
 ## Virus Scan Results
 There are some false positives associated with Oh-My-Posh and they are being tracked in [Issue 767](https://github.com/JanDeDobbeleer/oh-my-posh/issues/767)
  and is a somewhat common issue with programs written in Go. </description>

@@ -3,11 +3,11 @@ $pp = Get-PackageParameters
 
 $silentArgs = "/VERYSILENT";
 
-if ($pp['ALLUSERS']) {
-    $silentArgs = "$silentArgs /ALLUSERS"
+if ($pp['CURRENTUSER']) {
+    $silentArgs = "$silentArgs /CURRENTUSER"
 }
 else {
-    $silentArgs = "$silentArgs /CURRENTUSER"
+    $silentArgs = "$silentArgs /ALLUSERS"
 }
 
 $InstallArgs = @{ 
