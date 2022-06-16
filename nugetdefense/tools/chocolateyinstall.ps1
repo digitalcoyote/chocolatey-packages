@@ -1,2 +1,2 @@
 ﻿$ErrorActionPreference = 'Stop';
-dotnet tool update nugetdefense.Tool -g --version 3.0.1
+dotnet tool update nugetdefense.Tool -g --version 3.0.2
