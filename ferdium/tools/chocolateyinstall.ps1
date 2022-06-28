@@ -4,10 +4,10 @@ $args = @{
   PackageName = $env:ChocolateyPackageName
   FileType = 'msi'
   SilentArgs = '/qn'
-  Url64bit = 'https://github.com/ferdium/ferdium-app/releases/download/v6.0.0-nightly.78/Ferdium-6.0.0-nightly.78-ia32.msi'
-  Url = 'https://github.com/ferdium/ferdium-app/releases/download/v6.0.0-nightly.78/Ferdium-6.0.0-nightly.78-ia32.msi'
-  Checksum64 = 'a589c4e1d29ae4dd5f1c68f6f9c210deeb9b31bf533a1b8544cda0ce188ad491100855a34d9c29869fc584999d13ef6e0baa6c8fb6150f9b6808172903fe704a'
-  Checksum = 'a589c4e1d29ae4dd5f1c68f6f9c210deeb9b31bf533a1b8544cda0ce188ad491100855a34d9c29869fc584999d13ef6e0baa6c8fb6150f9b6808172903fe704a'
+  Url64bit = 'https://github.com/ferdium/ferdium-app/releases/download/v6.0.0-nightly.79/Ferdium-6.0.0-nightly.79-ia32.msi'
+  Url = 'https://github.com/ferdium/ferdium-app/releases/download/v6.0.0-nightly.79/Ferdium-6.0.0-nightly.79-ia32.msi'
+  Checksum64 = '81aba40a0318c83a25b15b2b7cb5484c090b78fbb724d86683e74752e3af1ba4c53ee776b5f7be305b3e338ade4ce43c8b6adad0169c3e20a70e79ddce6097f6'
+  Checksum = '81aba40a0318c83a25b15b2b7cb5484c090b78fbb724d86683e74752e3af1ba4c53ee776b5f7be305b3e338ade4ce43c8b6adad0169c3e20a70e79ddce6097f6'
   ChecksumType64 = 'sha512'
   ChecksumType = 'sha512'
 }
