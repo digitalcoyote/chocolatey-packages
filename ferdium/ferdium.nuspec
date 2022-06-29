@@ -44,7 +44,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <licenseUrl>https://github.com/ferdium/ferdium-app/blob/release/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/ferdium/ferdium-app</projectSourceUrl>
-    <docsUrl>https://help.getferdium.com/</docsUrl>
+    <docsUrl>https://ferdium.org/faq</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
     <bugTrackerUrl>https://github.com/ferdium/ferdium-app/issues</bugTrackerUrl>
     <authors>Ferdium Contributors</authors>
