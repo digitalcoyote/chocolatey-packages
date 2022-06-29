@@ -19,9 +19,9 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
   $regex   = '\/ferdium\/ferdium-app\/releases\/download\/v\d{1,4}\.\d{1,4}\.\d{1,4}.*\/Ferdium-\d{1,4}\.\d{1,4}\.\d{1,4}.*\.msi$'
   $url64     = $download_page.links | Where-Object href -match $regex | Select-Object -First 1 -expand href
-  $url64 = "https://github.com$url64"
   $version = $url64 -split '\/|v' | Select-Object -Last 1 -Skip 1
   $url32 = "https://github.com/ferdium/ferdium-app/releases/download/v$version/Ferdium-$version-ia32.msi"
+  $url64 = "https://github.com/ferdium/ferdium-app/releases/download/v$version/Ferdium-$version.msi
   $releaseNotes = "https://github.com/ferdium/ferdium-app/releases/tag/v$version"
   $versionParts = $version -split '-'
   $versionParts[1] = $versionParts[1].replace('.', '-')  
