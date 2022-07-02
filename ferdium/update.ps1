@@ -17,11 +17,11 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $regex   = '\/ferdium\/ferdium-app\/releases\/download\/v\d{1,4}\.\d{1,4}\.\d{1,4}.*\/Ferdium-\d{1,4}\.\d{1,4}\.\d{1,4}.*\.msi$'
+  $regex   = '\/ferdium\/ferdium-app\/tree\/v\d{1,4}\.\d{1,4}\.\d{1,4}.*$'
   $url64     = $download_page.links | Where-Object href -match $regex | Select-Object -First 1 -expand href
-  $version = $url64 -split '\/|v' | Select-Object -Last 1 -Skip 1
-  $url32 = "https://github.com/ferdium/ferdium-app/releases/download/v$version/Ferdium-$version-ia32.msi"
-  $url64 = "https://github.com/ferdium/ferdium-app/releases/download/v$version/Ferdium-$version.msi"
+  $version = $url64 -split '\/|v' | Select-Object -Last 1
+  $url32 = "https://github.com/ferdium/ferdium-app/releases/download/v$version/Ferdium-win-installer-$version-ia32.msi"
+  $url64 = "https://github.com/ferdium/ferdium-app/releases/download/v$version/Ferdium-win-installer-$version-x64.msi"
   $releaseNotes = "https://github.com/ferdium/ferdium-app/releases/tag/v$version"
   $versionParts = $version -split '-'
   $versionParts[1] = $versionParts[1].replace('.', '-')  
