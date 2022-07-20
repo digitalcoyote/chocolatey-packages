@@ -10,6 +10,7 @@
     <projectUrl>https://digitalcoyote.github.io/NuGetDefense/</projectUrl>
     <licenseUrl>https://github.com/digitalcoyote/NuGetDefense/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <iconUrl>https://rawcdn.githack.com/digitalcoyote/NuGetDefense/692238b35359748d3ec36f388b4330689ed64376/images/logo.png</iconUrl>
     <projectSourceUrl>https://github.com/digitalcoyote/NuGetDefense/</projectSourceUrl>
     <docsUrl>https://digitalcoyote.github.io/NuGetDefense/</docsUrl>
     <bugTrackerUrl>https://github.com/digitalcoyote/NuGetDefense/issues</bugTrackerUrl>
@@ -18,7 +19,7 @@
     <description>Installs the Global Tool for the NuGetDefense Package to allow scanning for dependencies manually or from a build server without building the code.</description>
 <releaseNotes>https://github.com/digitalcoyote/NuGetDefense/releases/</releaseNotes>
     <dependencies>
-      <dependency id="dotnetcore-sdk" version="3.0.100" />
+      <dependency id="dotnet-sdk" version="6.302" />
     </dependencies>
   </metadata>
   <files>
