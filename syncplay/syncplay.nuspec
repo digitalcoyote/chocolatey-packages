@@ -26,7 +26,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>1.6.9</version>
+    <version>1.7.0-persistentrooms1</version>
     <packageSourceUrl>https://github.com/digitalcoyote/chocolatey-packages</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>codingcoyote</owners>
@@ -52,7 +52,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <summary>Solution to synchronize video playback across multiple instances of mpv, VLC, MPC-HC, MPC-BE and mplayer2 over the Internet.</summary>
     <description>Syncplay allows people to enjoy a shared viewing experience even if they are thousands of miles apart, so friends can watch anime, movies, TV shows and other media together. The Syncplay Client launches a media player on your computer, connects to a Syncplay server and joins a virtual room on that server. Pauses, unpauses and seeks made within that media player instance are relayed to fellow viewers via the server to allow for these actions to be replicated by the media players of everyone else in the same virtual room. The server keeps track of where everyone is in the video so if someone joins they can be brought to the right place, and so if someone is too far ahead they can be brought back in sync.
 
-Syncplay can also share information about what files people are playing to make it easier for viewers to confirm they are playing the same file (or be warned if they are playing different files). Users can choose what file information is sent to the server in plain text, sent hashed, or not sent at all. Official public Syncplay servers operate in ‘room isolation’ mode, meaning any information sent by clients is only passed on to others in the same virtual room, and people cannot see what rooms currently exist. People can run their own private password protected Syncplay server.</description>
+Syncplay can also share information about what files people are playing to make it easier for viewers to confirm they are playing the same file (or be warned if they are playing different files). Users can choose what file information is sent to the server in plain text, sent hashed, or not sent at all. Official public Syncplay servers operate in ‘room isolation’ mode, meaning any information sent by clients is only passed on to others in the same virtual room, and people cannot see what rooms currently exist. People can run their own private password protected Syncplay server.
     
 #### Package Parameters
 
@@ -69,7 +69,7 @@ The 'Lang' package parameter can be set to change the installation Language (Def
 * 2070 - European Portuguese
 
 To pass parameters, use `--params "''"` (e.g. `choco install syncplay [other options] --params="'/Lang:1031'"`).
-To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
+To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.</description>
     
     <releaseNotes>https://syncplay.pl/changelog/</releaseNotes>
     <!-- =============================== -->      
