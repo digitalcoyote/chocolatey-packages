@@ -1,5 +1,5 @@
 
 VERIFICATION
-Download from here: 'https://github.com/jgraph/drawio-desktop/releases/download/v19.0.3/draw.io-19.0.3-windows-installer.exe'
+Download from here: 'https://github.com/jgraph/drawio-desktop/releases/download/v20.2.3/draw.io-20.2.3-windows-installer.exe'
 
-if (get-filehash -algorithm sha512 draw.io-setup-signed-19.0.3).hash = 'fd314f2e484647c77149147ba59375208e118d8cdde6a20e2c6e15b49066b5ed09e820a1eedf8c63b6b5f461bace04657a2060d53078cd9ba8ea224804b38a28'
+if (get-filehash -algorithm sha512 draw.io-setup-signed-20.2.3).hash = 'f607c1573348b5b0661fa49c9f4b8d36f2a345d014da3ae000d51abba9b17063c2258f8ea5643dab0a46dc02572b585776347ff8853d674ac98f5109901fe6ec'
