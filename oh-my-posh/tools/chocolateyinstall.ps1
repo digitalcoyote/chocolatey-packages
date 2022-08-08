@@ -21,6 +21,12 @@ $InstallArgs = @{
 
 Install-ChocolateyPackage  @InstallArgs
 
+if (Test-Path Function:\au_GetLatest) {
+    # Finish here if we're running inside AU
+    return
+}
+
+
 Write-Output "PROFILE: $profile"
 if (Test-Path $profile) {
     $oldprofile = Get-Content $profile
@@ -66,7 +72,7 @@ if (Test-Path $profile) {
 
     Write-Host "oh-my-posh has been added to your profile. You may wish to append 'Set-PoshPrompt paradox' to set a theme"
 }
-else if ($pp['CURRENTUSER']) {
+elseif ($pp['CURRENTUSER']) {
     Write-Host "No Powershell profile was found. You may wish to create a profile and append 'Invoke-Expression (oh-my-posh --init --shell pwsh --config ""$env:LocalAppData/Programs/oh-my-posh/themes/themename.omp.json"")' to enable oh-my-posh. 'Get-PoshThemes' will list available themes for you"
 }
 else {
