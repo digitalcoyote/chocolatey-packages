@@ -1,12 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop';
+$pp = Get-PackageParameters
 $Lang = "1033"
 if ($pp.count -gt 0 -and $pp['Lang']) { $Lang = $pp['Lang'] }
 
 $installArgs = @{ 
   PackageName    = $env:ChocolateyPackageName
   FileType       = 'EXE'
-  Url64bit       = 'https://github.com/Syncplay/syncplay/releases/download/v1.7.0-persistentrooms1/Syncplay-1.7.0-PersistetRoomsTest1-Setup.exe'
-  Checksum64     = '908d96c8e892ca3fbc1540b0e677e472ad20517e7be11adc85ae82898e68d252788356db82e1d012d48f412cb9f9f147e483bca6eb94def5839b6f60d8ed11b1'
+  Url64bit       = 'https://github.com/Syncplay/syncplay/releases/download/1.7.0-Beta1/Syncplay-1.7.0-Beta1-Setup.exe'
+  Checksum64     = 'e39d63a005083140c34d17a7322bfc52ad243e9fd7191d73b5a32b15f899a504adcbbd5fed3b318c89c63cd7c270b56ab5640f691b63da2f9dfb33bea4b032d6'
   SilentArgs     = "/S /LANG=$($Lang)"
   ChecksumType64 = 'sha512'
 }
