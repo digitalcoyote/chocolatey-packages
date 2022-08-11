@@ -6,8 +6,8 @@ $UnzipLocation = Join-Path $env:ChocolateyInstall (Join-Path 'lib' $env:Chocolat
 $ChocolateyInstallZipArguments = @{
     PackageName = $env:ChocolateyPackageName
     UnzipLocation = Join-Path $env:ChocolateyInstall (Join-Path 'lib' $env:ChocolateyPackageName)
-    Url64 = 'https://github.com/jenkins-zh/jenkins-cli/releases/download/v0.0.39/jcli-windows-amd64.zip'
-    CheckSum64 = 'e3161e180099bc9c9f405bd2834852571328a3031f7094f8727233ab7620a2dd7638548622ab02c93307ef9b5c9ffab12dbac64d60ae3f5fb973aa3dea14aad9'
+    Url64 = 'https://github.com/jenkins-zh/jenkins-cli/releases/download/v0.0.40/jcli-windows-amd64.zip'
+    CheckSum64 = 'b204a60364a06c98fa82765114abc9d61229ca30a72c04555a1c8d1888237545dab7db45edf14785570c83e093c3aef5abc22945453eeb2ef2ce3e5955791223'
     CheckSumType64 = 'sha512'
 }
 
