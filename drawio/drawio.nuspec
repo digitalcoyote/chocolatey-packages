@@ -10,7 +10,7 @@
     <projectUrl>https://www.draw.io</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/darwinjs/chocopackages/drawio/appicon.png</iconUrl>
     <copyright>2005-2019</copyright>
-    <licenseUrl>https://desk.draw.io/support/solutions/articles/16000039577-how-is-draw-io-licensed-</licenseUrl>
+    <licenseUrl>https://raw.githubusercontent.com/jgraph/drawio-desktop/dev/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/jgraph/drawio-desktop</projectSourceUrl>
     <docsUrl>https://about.draw.io/draw-io-diagramming-in-confluence-cheat-sheets-for-beginners/</docsUrl>
