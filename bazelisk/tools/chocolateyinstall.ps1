@@ -3,8 +3,8 @@
 $InstallArgs = @{
     PackageName = $env:ChocolateyPackageName
     FileFullPath = Join-Path (Join-Path $env:ChocolateyInstall (Join-Path 'lib' $env:ChocolateyPackageName)) 'bazelisk.exe'
-    URL64 = 'https://github.com/bazelbuild/bazelisk/releases/download/v1.14.0/bazelisk-windows-amd64.exe'
-    Checksum64 = '9441d05bc8f475cca965eb6a0d3ae0094eb61b5f6602ea0d414458bce820313601c0bba78e33283d08a6ff809948f798beba5ab9aed6b59d8fb0496f12efcfe8'
+    URL64 = 'https://github.com/bazelbuild/bazelisk/releases/download/v1.15.0/bazelisk-windows-amd64.exe'
+    Checksum64 = 'acca364eb167b0ea9467f4331416f1761ce59475cb31b7eebadd4cdfdaa1ee773d6f1d63906c81f49ebc087c5b79d77c2c1dfac2c15d61e2d0256a2f6ad266f3'
     ChecksumType64 = 'sha512'
     MaxIdleTime = 10000
 }
