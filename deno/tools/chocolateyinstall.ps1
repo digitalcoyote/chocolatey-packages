@@ -9,7 +9,7 @@ $UnzipLocation = Join-Path $env:ChocolateyInstall (Join-Path 'lib' $env:Chocolat
 Install-ChocolateyZipPackage -PackageName $env:ChocolateyPackageName -Url64 $url64 -UnzipLocation $UnzipLocation -CheckSum64 $checksum64 -CheckSumType64 $checksumType64
 
 #Create .ignore files so chocolatey does not shim the Exe
-$files = get-childitem $toolsDir -include *.exe -recurse
+$files = get-childitem $UnzipLocation -include *.exe -recurse
 foreach ($file in $files) {
   New-Item "$file.ignore" -type file -force | Out-Null
 }
