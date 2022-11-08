@@ -15,4 +15,7 @@ foreach ($file in $files) {
 }
 Install-ChocolateyPath -PathToInstall $UnzipLocation
 
+# Remove shims installed with the old package
+Uninstall-BinFile deno "$UnzipLocation\deno.exe"
+
 Write-Output "Run 'deno --help' to get started"
