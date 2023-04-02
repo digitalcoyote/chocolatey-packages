@@ -14,10 +14,10 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $regex   = '\/Syncplay\/syncplay\/releases\/download\/v\d{1,4}\.\d{1,4}\.\d{1,4}.*\/Syncplay-.*-Setup\.exe$'
+  $regex   = '/Syncplay/syncplay/tree\/v\d{1,4}\.\d{1,4}\.\d{1,4}.*$'
   $url     = $download_page.links | Where-Object href -match $regex | Select-Object -First 1 -expand href
-  $version = $url -split '\/|v' | Select-Object -Last 1 -Skip 1
-  $url = "https://github.com$url"
+  $version = $url -split '\/|v' | Select-Object -Last 1
+  $url = "https://github.com/Syncplay/syncplay/releases/download/v$version/Syncplay-$version-Setup.exe"
   $releaseNotes = "https://github.com/Syncplay/syncplay/releases/tag/v$version"
 
   return @{ Version = $version; URL64 = $url; ChecksumType64 = 'sha512'; ReleaseNotes = $releaseNotes}
