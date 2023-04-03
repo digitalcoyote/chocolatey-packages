@@ -1,5 +1,5 @@
 [![](https://ci.appveyor.com/api/projects/status/github/digitalcoyote/chocolatey-packages?svg=true)](https://ci.appveyor.com/project/digitalcoyote/chocolatey-packages)
-[![42](https://img.shields.io/badge/AU%20packages-45-red.svg)](#ok)
+[![50](https://img.shields.io/badge/AU%20packages-50-red.svg)](#ok)
 [![](http://transparent-favicon.info/favicon.ico)](#)
 [chocolatey/codingcoyote](https://chocolatey.org/profiles/codingcoyote)
 
@@ -10,8 +10,9 @@ This repository contains [chocolatey automatic packages](https://chocolatey.org/
 * [AuthPass](https://authpass.app/)
 * [Bazelisk](https://github.com/bazelbuild/bazelisk)
 * [Biome](https://github.com/biome-sh/biome)
+  * Currently not being built for Windows
 * [Bonobo Git Server](https://bonobogitserver.com/)
-* [Buffalo](http://gobuffalo.io/)
+* [Buffalo CLI](http://gobuffalo.io/)
 * [Deno](https://deno.land/)
 * [Docker Image Patrol (DIP)](https://github.com/030/dip)
 * [DocTo](https://chocolatey.org/packages/docto)
@@ -30,7 +31,7 @@ This repository contains [chocolatey automatic packages](https://chocolatey.org/
 * [KubeNS](https://github.com/ahmetb/kubectx)
 * [LiteDB.Studio](https://github.com/mbdavid/LiteDB.Studio)
 * [Milkman](https://github.com/warmuuh/milkman)
-  * milkman plugins (9 plugins and a metpackage)
+  * milkman plugins (13 plugins and a metpackage)
 * [Multipass](https://discourse.ubuntu.com/c/multipass)
 * [MyPaint](http://mypaint.org/)
 * [Nethermind](https://nethermind.io/)
