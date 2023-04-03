@@ -1,14 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $InstallArgs = @{
-    PackageName = $env:ChocolateyPackageName
-    URL = ''
-    URL32 = ''
-    UnzipLocation = Join-Path $env:ChocolateyInstall (Join-Path 'lib' $env:ChocolateyPackageName)
-    Checksum = ''
-    Checksum32 = ''
-    ChecksumType = 'sha512'
-    ChecksumType32 = 'sha512'
+    PackageName    = $env:ChocolateyPackageName
+    UnzipLocation  = Join-Path $env:ChocolateyInstall (Join-Path 'lib' $env:ChocolateyPackageName)
+    URL64          = ''
+    URL            = ''
+    Checksum64     = ''
+    Checksum       = ''
+    ChecksumType64 = 'sha512'
+    ChecksumType   = 'sha512'
 }
 
 

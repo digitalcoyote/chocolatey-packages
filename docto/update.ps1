@@ -5,12 +5,12 @@ $releases = "https://github.com/tobya/DocTo/releases/"
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(URL32\s*=\s*)('.*')" = "`$1'$($Latest.URL32)'"
       "(URL\s*=\s*)('.*')" = "`$1'$($Latest.URL)'"
-      "(Checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-      "(Checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum)'"
-      "(ChecksumType32\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
+      "(URL64\s*=\s*)('.*')" = "`$1'$($Latest.URL64)'"
+      "(Checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
+      "(Checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
       "(ChecksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType)'"
+      "(ChecksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
     }
   }
 }
@@ -23,7 +23,7 @@ function global:au_GetLatest {
   $url = "https://github.com/tobya/DocTo/releases/download/v$version/docto_32.zip"
   $url64 = "https://github.com/tobya/DocTo/releases/download/v$version/docto_64.zip"
 
-  return @{ Version = $version; URL = $url; URL64= $url64; ChecksumType32 = 'sha512'; ChecksumType = 'sha512';}
+  return @{ Version = $version; URL = $url; URL64= $url64; ChecksumType = 'sha512'; ChecksumType64 = 'sha512';}
 }
 
-Update-Package -ChecksumFor 32
+Update-Package -ChecksumFor all
