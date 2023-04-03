@@ -22,11 +22,11 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- This section is about this package, although id and version have ties back to the software -->
     <!-- id is lowercase and if you want a good separator for words, use '-', not '.'. Dots are only acceptable as suffixes for certain types of packages, e.g. .install, .portable, .extension, .template -->
     <!-- If the software is cross-platform, attempt to use the same id as the debian/rpm package(s) if possible. -->
-    <id>milkman-plugins</id>
+    <id>milkman-sio</id>
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>5.6.0</version>
+    <version>0</version>
     <packageSourceUrl>https://github.com/digitalcoyote/chocolatey-packages</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>codingcoyote</owners>
@@ -34,7 +34,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>Milkman Plugins</title>
+    <title>Milkman-sio</title>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://github.com/warmuuh/milkman</projectUrl>
     <iconUrl>https://rawcdn.githack.com/warmuuh/milkman/d0c19d3d75673c4f043538886de3651da0678f14/img/milk-bottle.png</iconUrl>
@@ -42,31 +42,22 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://github.com/warmuuh/milkman/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/warmuuh/milkman/tree/master/milkman-sync-git</projectSourceUrl>
-    <docsUrl>https://github.com/warmuuh/milkman/blob/master/milkman-sync-git/readme.md</docsUrl>
+    <projectSourceUrl>https://github.com/warmuuh/milkman/tree/master/milkman-sio</projectSourceUrl>
+    <docsUrl>https://github.com/warmuuh/milkman/blob/master/milkman-sio/readme.md</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
     <bugTrackerUrl>https://github.com/warmuuh/milkman/issues</bugTrackerUrl>
     <authors>warmuuh</authors>
-    <tags>milkman plugins</tags>
-    <summary>Milkman Plugin</summary>
-    <description>This meta-package installs Milkman and all plugins distributed by the Milkman project.</description>
+    <tags>milkman sio</tags>
+    <summary>Milkman Socket.IO Plugin</summary>
+    <description>
+        Provides support for Socket.IO transport
+    </description>
     <releaseNotes>https://github.com/warmuuh/milkman/blob/master/changelog.md</releaseNotes>
     <!-- =============================== -->      
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
     <dependencies>
       <dependency id="milkman" version="[5.6.0]" />
-      <dependency id="milkman-cassandra" version="[5.6.0]" />
-      <dependency id="milkman-explore" version="[5.6.0]" />
-      <dependency id="milkman-graphql" version="[5.6.0]" />
-      <dependency id="milkman-grpc" version="[5.6.0]" />
-      <dependency id="milkman-jdbc" version="[5.6.0]" />
-      <dependency id="milkman-note" version="[5.6.0]" />
-      <dependency id="milkman-privatebin" version="[5.6.0]" />
-      <dependency id="milkman-scripting" version="[5.6.0]" />
-      <dependency id="milkman-sync-git" version="[5.6.0]" />
-      <dependency id="milkman-auth" version="[5.6.0]" />
-      <dependency id="milkman-sio" version="[5.6.0]" />
     </dependencies>
     <!-- chocolatey-core.extension - https://chocolatey.org/packages/chocolatey-core.extension
          - You want to use Get-UninstallRegistryKey on less than 0.9.10 (in chocolateyUninstall.ps1)
@@ -80,8 +71,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
   </metadata>
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
-    <file src="*.ps1" exclude="update.ps1" />
+    <file src="tools\**" target="tools" />
     <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
   </files>
 </package>
-
