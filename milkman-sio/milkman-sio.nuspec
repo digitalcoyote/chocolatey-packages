@@ -34,7 +34,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>Milkman-sio</title>
+    <title>Milkman Socket.IO</title>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://github.com/warmuuh/milkman</projectUrl>
     <iconUrl>https://rawcdn.githack.com/warmuuh/milkman/d0c19d3d75673c4f043538886de3651da0678f14/img/milk-bottle.png</iconUrl>
