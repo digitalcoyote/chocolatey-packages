@@ -1,7 +1,7 @@
 ﻿import-module au
 
 $releases = "https://github.com/warmuuh/milkman/releases"
-$PackageName = "milkman-scripting"
+$PackageName = "milkman-ws"
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
