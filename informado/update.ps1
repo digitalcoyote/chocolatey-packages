@@ -17,7 +17,7 @@ function global:au_GetLatest {
   $regex   = '/030/informado/tree/[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}.*'
   $url = $download_page.links | Where-Object href -match $regex | Select-Object -First 1 -expand href
   $version = $url -split '\/' | Select-Object -Last 1
-  $url = "https://github.com/030/informado/releases/download/$version/informado-windows"
+  $url = "https://github.com/030/informado/releases/download/$version/informado-windows-2019"
   return @{ Version = $version; URL = $url; ChecksumType32 = 'sha512';}
 }
 
