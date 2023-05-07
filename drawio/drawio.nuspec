@@ -13,7 +13,7 @@
     <licenseUrl>https://raw.githubusercontent.com/jgraph/drawio-desktop/dev/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/jgraph/drawio-desktop</projectSourceUrl>
-    <docsUrl>https://about.draw.io/draw-io-diagramming-in-confluence-cheat-sheets-for-beginners/</docsUrl>
+    <docsUrl>https://www.drawio.com/doc/</docsUrl>
     <bugTrackerUrl>https://github.com/jgraph/drawio-desktop/issues</bugTrackerUrl>
     <tags>drawio draw.io diagramesnet diagrams.net</tags>
     <summary>Desktop Version of popular diagrams.net diagramming software.</summary>
