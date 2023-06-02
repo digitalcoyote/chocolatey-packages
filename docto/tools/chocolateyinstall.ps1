@@ -3,10 +3,10 @@
 $InstallArgs = @{
     PackageName    = $env:ChocolateyPackageName
     UnzipLocation  = Join-Path $env:ChocolateyInstall (Join-Path 'lib' $env:ChocolateyPackageName)
-    URL64          = 'https://github.com/tobya/DocTo/releases/download/v1.8/docto_64.zip'
-    URL            = 'https://github.com/tobya/DocTo/releases/download/v1.8/docto_32.zip'
-    Checksum64     = '167c35d248cfed6a7f21f8b6e3ec1444bff2796e9c7272c14849496789a1921a823eb4a5ea9d2954d68a7904ca842fa8771f2836f82b4949ae84d1366adcc82c'
-    Checksum       = '81c7c5a29e8f3df5c53c00d2d3cc6633d4824555c36aadcd547592c3b6fc2e96'
+    URL64          = 'https://github.com/tobya/DocTo/releases/download/v1.9/docto_64.zip'
+    URL            = 'https://github.com/tobya/DocTo/releases/download/v1.9/docto_32.zip'
+    Checksum64     = '35a31d6791df113b41943278c08cdef16c16435a2dfbff6400429284fa447dd4288109533a70182396bd122aed774bcf0fbcdcf50b9e1f9091e5bb62586f408c'
+    Checksum       = '831d7280386d95bf84629b8eb596bad7cbb3cc266aea7691767b11dae6a2014c'
     ChecksumType64 = 'sha512'
     ChecksumType   = 'sha512'
 }
