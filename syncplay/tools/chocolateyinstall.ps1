@@ -6,8 +6,8 @@ if ($pp.count -gt 0 -and $pp['Lang']) { $Lang = $pp['Lang'] }
 $installArgs = @{ 
   PackageName    = $env:ChocolateyPackageName
   FileType       = 'EXE'
-  Url64bit       = 'https://github.com/Syncplay/syncplay/releases/download/1.7.0-Beta1/Syncplay-1.7.0-Beta1-Setup.exe'
-  Checksum64     = 'e39d63a005083140c34d17a7322bfc52ad243e9fd7191d73b5a32b15f899a504adcbbd5fed3b318c89c63cd7c270b56ab5640f691b63da2f9dfb33bea4b032d6'
+  Url64bit       = 'https://github.com/Syncplay/syncplay/releases/download/v1.7.1-RC1/Syncplay-1.7.1-RC1-Setup.exe'
+  Checksum64     = '35e7e9714a13a62dadf378f85f61fcee7a31d8ee05088b265ad5408db80940cc91575a77391e296ca1018bfea3b3ab509a604a9f2732e83a098d6e57079f6a1a'
   SilentArgs     = "/S /LANG=$($Lang)"
   ChecksumType64 = 'sha512'
 }
