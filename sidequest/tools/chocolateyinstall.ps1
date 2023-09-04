@@ -4,8 +4,8 @@ $InstallArgs = @{
     PackageName = $env:ChocolateyPackageName
     FileType = 'exe'
     SilentArgs = '/S'
-    URL64 = 'https://github.com/SideQuestVR/SideQuest/releases/download/v0.10.37/SideQuest-Setup-0.10.37-x64-win.exe'
-    Checksum64 = '546f3e8de48d205880f2e40507ba30154487234b0ae1db13a48a216faf11d25e7a19f2a6f8b7e14f501969e3b61861de5f2818f3408c319d2dc39742234c15bc'
+    URL64 = 'https://github.com/SideQuestVR/SideQuest/releases/download/v0.10.38/SideQuest-Setup-0.10.38-x64-win.exe'
+    Checksum64 = '8d4e5b48534f0fc1e4d7d1fd38f2424168d311ef04648887b1339c4d160a5f311137af60b47e7e27db5c2aaf81f0d34253d14856cc7e9b187e98b03f7f3eead6'
     ChecksumType64 = 'sha512'
 }
 
