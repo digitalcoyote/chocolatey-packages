@@ -3,7 +3,7 @@ $pp = Get-PackageParameters
 if (!$pp['HyperVisor']) { $pp['HyperVisor'] = "Hyper-V" }
 $winversion = Get-cimInstance -ClassName Win32_OperatingSystem | Select-Object Caption, Version, BuildNumber
 if ($pp['HyperVisor'] -match 'Hyper-*V') {
-  if (((($winversion.Caption) -match '.*1[0-9]{1}.*Pro.*') -or (($winversion.Caption) -match '.*1[0-9]{1}.*Enterprise.*') -or (($winversion.Caption) -match '.*1[0-9]{1}.*专业.*')) -or (($winversion.Caption) -match '.*1[0-9]{1}.*企业.*')) -or (($winversion.Caption) -match '.*1[0-9]{1}.*Корпоративная.*')) -and ($winversion.BuildNumber -gt 17134)) {
+  if (((((($winversion.Caption) -match '.*1[0-9]{1}.*Pro.*') -or (($winversion.Caption) -match '.*1[0-9]{1}.*Entreprise.*') -or (($winversion.Caption) -match '.*1[0-9]{1}.*Enterprise.*') -or (($winversion.Caption) -match '.*1[0-9]{1}.*专业.*')) -or (($winversion.Caption) -match '.*1[0-9]{1}.*企业.*')) -or (($winversion.Caption) -match '.*1[0-9]{1}.*Корпоративная.*')) -and ($winversion.BuildNumber -gt 17134)) {
     if ((Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V).State -eq "Disabled") {
       Write-Output "Installing Hyper-V"
       Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All -NoRestart
@@ -21,8 +21,8 @@ $args = @{
   PackageName = $env:ChocolateyPackageName
   FileType = 'exe'
   SilentArgs = '/S'
-  Url64bit = 'https://github.com/canonical/multipass/releases/download/v1.10.0/multipass-1.10.0+win-win64.exe'
-  Checksum64 = '4430701d1540e39f9033c2b1f394eee00ec13f8804d08b11ba1188c1a4d59a1fe5fa50c8c851a318ffe2f75f3115bd2c80a3aa2c1dfac1803666991ed7a77b91'
+  Url64bit = 'https://github.com/canonical/multipass/releases/download/v1.12.2/multipass-1.12.2+win-win64.exe'
+  Checksum64 = ''
   ChecksumType64 = 'sha512'
 }
 
