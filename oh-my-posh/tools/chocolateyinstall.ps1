@@ -38,7 +38,7 @@ if (Test-Path $profile) {
 
     if ($pp['Theme']) {
         $themeName = $pp['Theme']
-        if (Test-Path "$env:LocalAppDataPrograms/oh-my-posh/themes/$($themeName).omp.json") {
+        if (Test-Path "$env:LocalAppData/Programs/oh-my-posh/themes/$($themeName).omp.json") {
             $ohMyPoshprofileLine = "Invoke-Expression (oh-my-posh --init --shell pwsh --config ""$env:LocalAppData/Programs/oh-my-posh/themes/$($themeName).omp.json"")"
             # $ohMyPoshprofileLine = "Set-PoshPrompt -Theme $themeName" # Suggestion for possible alternative
             if ($OhMyPoshInprofile) {
@@ -53,7 +53,7 @@ if (Test-Path $profile) {
             }
         }
         else {
-            Throw "Could not find Theme $themeName @ $env:LocalAppDataPrograms/oh-my-posh/themes/$($themeName).omp.json";
+            Throw "Could not find Theme $themeName @ $env:LocalAppData/Programs/oh-my-posh/themes/$($themeName).omp.json";
         }
         if (-Not($OhMyPoshInprofile)) {
             Add-Content -Path $profile -Value "Invoke-Expression (oh-my-posh --init --shell pwsh --config ""$env:LocalAppData/Programs/oh-my-posh/themes/$($themeName).omp.json"")";
