@@ -4,8 +4,8 @@ $args = @{
   PackageName = $env:ChocolateyPackageName
   FileType = 'exe'
   SilentArgs = '/ALLUSERS /S'
-  Url = 'https://github.com/ferdium/ferdium-app/releases/download/v6.5.2/Ferdium-win-AutoSetup-6.5.2.exe'
-  Checksum = '929c85d876dac6bc9687f91c214393f045505990b3142e8e1eb4b8d8dd4e704452f7605faef3e8ae180cda7c71f013a56ee32e5f256f3e71fa5b23de2d2ae994'
+  Url = 'https://github.com/ferdium/ferdium-app/releases/download/v6.6.0/Ferdium-win-AutoSetup-6.6.0.exe'
+  Checksum = '83ac17282dfb47ed05c9c80c0395e8bd989aca4c826b2998eb99c63a6b0423feb3324c22e1b48f31311eb1621734d3b6089166d83ff2f1cd6fa69c2776a5d80a'
   ChecksumType = 'sha512'
 }
 
