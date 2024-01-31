@@ -16,6 +16,10 @@ function global:au_SearchReplace {
       "(\<dependency id=""milkman-scripting"" version=""\[).*(\]""\s*/>)" = "`${1}$($Latest.Version)`$2"
       "(\<dependency id=""milkman-note"" version=""\[).*(\]""\s*/>)" = "`${1}$($Latest.Version)`$2"
       "(\<dependency id=""milkman-sync-git"" version=""\[).*(\]""\s*/>)" = "`${1}$($Latest.Version)`$2"
+      "(\<dependency id=""milkman-auth"" version=""\[).*(\]""\s*/>)" = "`${1}$($Latest.Version)`$2"
+      "(\<dependency id=""milkman-sio"" version=""\[).*(\]""\s*/>)" = "`${1}$($Latest.Version)`$2"
+      "(\<dependency id=""milkman-test"" version=""\[).*(\]""\s*/>)" = "`${1}$($Latest.Version)`$2"
+      "(\<dependency id=""milkman-ws"" version=""\[).*(\]""\s*/>)" = "`${1}$($Latest.Version)`$2"
     }
   }
 }
