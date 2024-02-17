@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>usbpid-win</id>
+    <version>0.0.1</version>
+    <packageSourceUrl>https://github.com/digitalcoyote/chocolatey-packages/tree/master/nugetdefense</packageSourceUrl>
+    <owners>CodingCoyote</owners>
+    <title>usbipd-win</title>
+    <authors>dorssel</authors>
+    <projectUrl>https://github.com/dorssel/usbipd-win</projectUrl>
+    <licenseUrl>https://github.com/dorssel/usbipd-win/blob/master/COPYING.md</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/dorssel/usbipd-win</projectSourceUrl>
+    <docsUrl>https://github.com/dorssel/usbipd-win/blob/master/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/dorssel/usbipd-win/issues</bugTrackerUrl>
+    <tags>Hyper-V WSL USB Virtual Machine usbpid</tags>
+    <summary>Windows software for sharing locally connected USB devices to other machines, including Hyper-V guests and WSL 2.</summary>
+    <description>usbipd-win implements the USB/IP protocol, which allows you to attach and detach USB devices over the network. You can use usbipd-win to share your locally connected USB devices with other machines, or to access remote USB devices from your machine. usbipd-win supports both server and client modes, and works with Hyper-V guests and WSL 2. This is especially useful when using flashing android devices using Windows Subsystem for Linux</description>
+<releaseNotes>https://github.com/dorssel/usbipd-win/releases</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
