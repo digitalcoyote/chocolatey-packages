@@ -21,7 +21,7 @@ This repository contains [chocolatey automatic packages](https://chocolatey.org/
   * Adopted from previous maintainer to automate updates
 * [Em-n-En](https://github.com/CemraJC/em-n-en)
 * [Ferdi](https://getferdi.com/)
-* [File Converter](https://file-converter.org/)
+* [File Converter](https://file-converter.io/)
 * [gitb](https://github.com/vvatanabe/gitb)
 * [Jenkins CLI (jcli)](http://jcli.jenkins-zh.cn/)
   * Alternative CLI for Jenkins that can be used to manage multiple servers
