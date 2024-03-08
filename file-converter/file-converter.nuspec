@@ -36,7 +36,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- This section is about the software itself -->
     <title>File Converter</title>
     <!-- projectUrl is required for the community feed -->
-    <projectUrl>https://file-converter.org/</projectUrl>
+    <projectUrl>https://file-converter.io/</projectUrl>
     <iconUrl>https://rawcdn.githack.com/Tichau/FileConverter/64aa1750b99faf82db4136181c1288d60227aab9/Resources/Icons/ApplicationIcon.svg</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
