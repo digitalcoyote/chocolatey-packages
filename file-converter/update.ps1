@@ -5,9 +5,9 @@ $releases = "https://github.com/Tichau/FileConverter/releases"
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(Url64\s*=\s*)('.*')"          = "`$1'$($Latest.URL64)'"
-      "(Checksum64\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum64)'"
-      "(ChecksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
+      "(Url\s*=\s*)('.*')"          = "`$1'$($Latest.URL64)'"
+      "(Checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum64)'"
+      "(ChecksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
     }
   }
 }
