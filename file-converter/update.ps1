@@ -17,7 +17,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $regex = '\/Tichau\/FileConverter\/tree\/v\d{1,4}\.\d{1,4}\.\d{1,4}'
+  $regex = '\/Tichau\/FileConverter\/tree\/v\d{1,4}\.\d{1,4}\.?\d{0,4}'
   $versionurl = $download_page.links | Where-Object href -match $regex | Select-Object -First 1 -expand href
   $version = $versionurl -split '\/|v' | Select-Object -Last 1
   $url = "https://github.com/Tichau/FileConverter/releases/download/v$version/FileConverter-$version-x86-setup.msi"
