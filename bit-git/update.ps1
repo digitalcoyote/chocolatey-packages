@@ -14,12 +14,13 @@ function global:au_SearchReplace {
   }
 }
 
+# https://github.com/chriswalz/bit/releases/download/v1.1.2/bit_1.1.2_windows_amd64.tar.gz
+
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $regex   = "\/chriswalz\/bit\/releases\/download\/v\d{1,3}\.\d{1,3}\.\d{1,3}\/bit_\d{1,3}\.\d{1,3}\.\d{1,3}_windows_amd64.tar.gz$"
+  $regex   = "\/chriswalz\/bit\/tree\/v\d{1,3}\.\d{1,3}\.\d{1,3}"
   $url     = $download_page.links | Where-Object href -match $regex | Select-Object -First 1 -expand href
-  $version = $url -split '\/' | Select-Object -Last 1 -Skip 1
-  $version = $version -split 'v' | Select-Object -Last 1
+  $version = $url -split '\/|v' | Select-Object -Last 1
   $url32 = "$releases/download/v$version/bit_$($version)_windows_386.tar.gz"  
   $url64 = "$releases/download/v$version/bit_$($version)_windows_amd64.tar.gz"
   $ReleaseNotesVersion = $version -replace '\.', ''
