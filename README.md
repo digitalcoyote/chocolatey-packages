@@ -1,5 +1,5 @@
 [![](https://ci.appveyor.com/api/projects/status/github/digitalcoyote/chocolatey-packages?svg=true)](https://ci.appveyor.com/project/digitalcoyote/chocolatey-packages)
-[![50](https://img.shields.io/badge/AU%20packages-50-red.svg)](#ok)
+[![54](https://img.shields.io/badge/AU%20packages-54-red.svg)](#ok)
 [![](http://transparent-favicon.info/favicon.ico)](#)
 [chocolatey/codingcoyote](https://chocolatey.org/profiles/codingcoyote)
 
@@ -11,8 +11,12 @@ This repository contains [chocolatey automatic packages](https://chocolatey.org/
 * [Bazelisk](https://github.com/bazelbuild/bazelisk)
 * [Biome](https://github.com/biome-sh/biome)
   * Currently not being built for Windows
+* [bit](https://github.com/chriswalz/bit)
+  * Listed as bit-git as there is another package by the name of bit
 * [Bonobo Git Server](https://bonobogitserver.com/)
 * [Buffalo CLI](http://gobuffalo.io/)
+* [Buildifier](https://github.com/bazelbuild/buildtools/blob/master/buildifier/README.md)
+* [Buildozer](https://github.com/bazelbuild/buildtools/blob/master/buildozer/README.md)
 * [Deno](https://deno.land/)
 * [Docker Image Patrol (DIP)](https://github.com/030/dip)
 * [DocTo](https://chocolatey.org/packages/docto)
@@ -20,7 +24,8 @@ This repository contains [chocolatey automatic packages](https://chocolatey.org/
   * Website changed to diagrams.net
   * Adopted from previous maintainer to automate updates
 * [Em-n-En](https://github.com/CemraJC/em-n-en)
-* [Ferdi](https://getferdi.com/)
+* [Ferdium](https://ferdium.org/)
+ * forked from Ferdi
 * [File Converter](https://file-converter.io/)
 * [gitb](https://github.com/vvatanabe/gitb)
 * [Jenkins CLI (jcli)](http://jcli.jenkins-zh.cn/)
@@ -31,7 +36,7 @@ This repository contains [chocolatey automatic packages](https://chocolatey.org/
 * [KubeNS](https://github.com/ahmetb/kubectx)
 * [LiteDB.Studio](https://github.com/mbdavid/LiteDB.Studio)
 * [Milkman](https://github.com/warmuuh/milkman)
-  * milkman plugins (13 plugins and a metpackage)
+  * milkman plugins (15 plugins and a metpackage)
 * [Multipass](https://discourse.ubuntu.com/c/multipass)
 * [MyPaint](http://mypaint.org/)
 * [Nethermind](https://nethermind.io/)
@@ -45,8 +50,8 @@ This repository contains [chocolatey automatic packages](https://chocolatey.org/
 * [SMMDB-Client](https://github.com/Tarnadas/smmdb-client)
 * [Sourcetrail](https://www.sourcetrail.com/)
 * [syncplay](https://syncplay.pl/)
-* [Stride 3D Game Engine](https://stride3D.com/)
-  * Formerly Xenko Game Engine
+* [usbpid-win](https://github.com/dorssel/usbipd-win)
+* [Winpinator](https://winpinator.swisz.cz/)
 * [Yori](http://www.malsmith.net/yori/)
 
 ## Love it? Support it!
