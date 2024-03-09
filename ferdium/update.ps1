@@ -17,7 +17,7 @@ function global:au_GetLatest {
   $regex   = '\/ferdium\/ferdium-app\/tree\/v\d{1,4}\.\d{1,4}\.\d{1,4}(?:\.\d{1,4})?(?:-beta.*)?$'
   $url64     = $download_page.links | Where-Object href -match $regex | Select-Object -First 1 -expand href
   $version = $url64 -split '\/|v' | Select-Object -Last 1
-  $url64 = "https://github.com/ferdium/ferdium-app/releases/download/v$version/Ferdium-win-AutoSetup-$version.exe"
+  $url64 = "https://github.com/ferdium/ferdium-app/releases/download/v$version/Ferdium-win-AutoSetup-$version-x64.exe"
   $releaseNotes = "https://github.com/ferdium/ferdium-app/releases/tag/v$version"
   $versionParts = $version -split '-'
   if ($versionParts.Length -gt 1) {
