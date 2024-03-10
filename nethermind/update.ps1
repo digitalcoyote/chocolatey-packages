@@ -18,11 +18,11 @@ function global:au_GetLatest {
   $url     = $download_page.links | Where-Object href -match $regex | Select-Object -First 1 -expand href
   $version = $url -split '\/' | Select-Object -Last 1
 
-  $versionReleasePage = Invoke-WebRequest -Uri "https://github.com/NethermindEth/nethermind/releases/tag/$version" -UseBasicParsing
+  $versionReleasePage = Invoke-WebRequest -Uri "https://github.com/NethermindEth/nethermind/releases/expanded_assets/$version" -UseBasicParsing
   $downloadregex      = "\/NethermindEth\/nethermind\/releases\/download\/$version\/nethermind-$version-.*-windows-x64.zip"
   $url                = $versionReleasePage.links | Where-Object href -match $downloadregex | Select-Object -First 1 -expand href
   $url                = "https://github.com$url"
-  return @{ Version = $version; URL64 = $url; ChecksumType64 = 'sha512';}
+  return @{ Version = $version; URL64 = $url; ChecksumType64 = 'sha512'; $NoCheckChocoVersion = $true}
 }
 
-Update-Package -ChecksumFor 64
+Update-Package -ChecksumFor 64 -NoCheckChocoVersion
