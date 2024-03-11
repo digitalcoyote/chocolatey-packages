@@ -18,11 +18,11 @@ function global:au_GetLatest {
   $regex         = '\/authpass\/authpass\/tree\/v\d{1,4}\.\d{1,4}\.\d{1,4}'
   $url           = $download_page.links | Where-Object href -match $regex | Select-Object -First 1 -expand href
   $version       = $url -split '\/|v' | Select-Object -Last 1
-  $download_page = Invoke-WebRequest -Uri "https://github.com/authpass/authpass/releases/tag/v$version" -UseBasicParsing
-  $regex         = '\/authpass\/authpass\/releases\/downloads\/v\d{1,4}\.\d{1,4}\.\d{1,4}\/authpass-setup.*\.exe$'
-  $url           = $download_page.links | Where-Object href -match $regex | Select-Object -First 1 -expand href
-  $url           = "https://github.com$url"
-  $releaseNotes  = "https://github.com/authpass/authpass/releases/tag/v$version"
+
+  $versionReleasePage = Invoke-WebRequest -Uri "https://github.com/authpass/authpass/releases/expanded_assets/v$version" -UseBasicParsing
+  $downloadregex      = "\/authpass\/authpass\/releases\/download\/v$version\/AuthPass-setup-.*.exe"
+  $url                = $versionReleasePage.links | Where-Object href -match $downloadregex | Select-Object -First 1 -expand href
+  $url                = "https://github.com$url"
 
   return @{ Version = $version; URL64 = $url; ChecksumType64 = 'sha512'; ReleaseNotes = $releaseNotes}
 }
