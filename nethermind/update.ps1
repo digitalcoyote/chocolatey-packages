@@ -25,4 +25,4 @@ function global:au_GetLatest {
   return @{ Version = $version; URL64 = $url; ChecksumType64 = 'sha512'; $NoCheckChocoVersion = $true}
 }
 
-Update-Package -ChecksumFor 64 -NoCheckChocoVersion
+Update-Package -ChecksumFor 64
