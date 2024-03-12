@@ -26,7 +26,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- Version should MATCH as closely as possible with the underlying software -->
     <!-- Is the Version a prerelease of a Version? https://docs.nuget.org/create/Versioning#creating-prerelease-packages -->
     <!-- Note that unstable Versions like 0.0.1 can be considered a released Version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 Version. If the Version number is final, that is considered a released Version and not a prerelease. -->
-    <version>5.8.0</version>
+    <version>5.9.0</version>
     <packageSourceUrl>https://github.com/digitalcoyote/chocolatey-packages</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>codingcoyote</owners>
@@ -57,7 +57,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 
     <!-- Specifying dependencies and Version ranges? https://docs.nuget.org/create/Versioning#specifying-Version-ranges-in-.nuspec-files -->
     <dependencies>
-      <dependency id="milkman" version="[5.8.0]" />
+      <dependency id="milkman" version="[5.9.0]" />
     </dependencies>
     <!-- chocolatey-core.extenwsn - https://chocolatey.org/packages/chocolatey-core.extenwsn
          - You want to use Get-UninstallRegistryKey on less than 0.9.10 (in chocolateyUninstall.ps1)
