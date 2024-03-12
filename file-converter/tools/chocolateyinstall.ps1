@@ -4,8 +4,8 @@ $InstallArgs = @{
     PackageName    = $env:ChocolateyPackageName
     FileType       = 'msi'
     SilentArgs     = '/q'
-    URL          = 'https://github.com/Tichau/FileConverter/releases/download/v2.0.1/FileConverter-2.0.1-x64-setup.msi'
-    Checksum     = '0a3f60b2471b5ad7c47b10c679e4ffdf1cc8ed941d9d42baf75cecc912c259e0587611cd90442d0d9cc9576c2b2b1cbd52106e10b39cb833f397dd7128ae9de8'
+    URL          = 'https://github.com/Tichau/FileConverter/releases/download/v2.0.2/FileConverter-2.0.2-x64-setup.msi'
+    Checksum     = 'bfc1244dc950bd6ce431408d1101e30c5b2a36886890f2ee1c8ed7be1cdde29ed7b448165cdde3e70ebbee3388adc3c1961d48b3713d5166546b550c95a82b7c'
     ChecksumType = 'sha512'
 }
 
