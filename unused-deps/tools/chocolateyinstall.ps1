@@ -2,9 +2,9 @@
 
 $InstallArgs = @{
     PackageName = $env:ChocolateyPackageName
-    URL64 = 'https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/unused_deps-windows-amd64.exe'
+    URL64 = 'https://github.com/bazelbuild/buildtools/releases/download/v7.1.0/unused_deps-windows-amd64.exe'
     FileFullPath = Join-Path (Join-Path $env:ChocolateyInstall (Join-Path 'lib' $env:ChocolateyPackageName)) 'unused_deps.exe'
-    Checksum64 = '799414e49f533c362efccced8c4645b098cc99e42331398920eab78d1df66afb90fbfa91321246dcc14fd8857e7cc94e7f0b5532d4c644159494d24c6dbabe9c'
+    Checksum64 = '70792eacc8098b11deacfab37a2325ca90bea0542fec992251b427489e4d1964bcf23636588a73a66e157b032dcd7af19dbb10e78f1d81a832d8173cddad3ebb'
     ChecksumType64 = 'sha512'
 }
 
