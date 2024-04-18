@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>unused-deps</id>
-    <version>7.1.0</version>
+    <version>7.1.1</version>
     <packageSourceUrl>https://github.com/digitalcoyote/chocolatey-packages/tree/master/unused-deps</packageSourceUrl>
     <owners>CodingCoyote</owners>
     <title>unused_deps</title>
