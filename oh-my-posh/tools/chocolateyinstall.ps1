@@ -13,8 +13,8 @@ else {
 $InstallArgs = @{ 
     PackageName    = $env:ChocolateyPackageName
     FileType       = 'exe'
-    Url64bit       = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v20.0.2/install-amd64.exe'
-    Checksum64     = 'ed6544d1fed033e0d372e7d135faf017c14c7671713b0068c899cb80d6894b5cdda90beb0e3dc297aa8181e0f2c9b5d770fd125bc6dd650d5b3ba01f3bb19e67'
+    Url64bit       = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v20.1.0/install-amd64.exe'
+    Checksum64     = '57588b409315641e11e808f4be3235e0f8a44c05fbe98923b945a9e587f8fa690471b4bcf59107ddc083025547c5fc3520679eff7121015b6322b3b0f9b62da1'
     SilentArgs     = $silentArgs 
     ChecksumType64 = 'sha512'
 }
