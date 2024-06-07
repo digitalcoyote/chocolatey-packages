@@ -1,5 +1,5 @@
 
 VERIFICATION
-Download from here: 'https://github.com/jgraph/drawio-desktop/releases/download/v24.4.13/draw.io-24.4.13-windows-installer.exe'
+Download from here: 'https://github.com/jgraph/drawio-desktop/releases/download/v24.5.1/draw.io-24.5.1-windows-installer.exe'
 
-if (get-filehash -algorithm sha512 draw.io-setup-signed-24.4.13).hash = '91cc3651f07bd7d02e013f02a3a265420977800a68799ff950562e275bd89fa9e4c2fa28ec923dfd8d9229cb42c4ca6a883ff6c10cc2a834266b2530f49291a8'
+if (get-filehash -algorithm sha512 draw.io-setup-signed-24.5.1).hash = '6bd3fc5046e4c4f0ba8ceccdd41374826bc1a96461337ebc4d709f527d0138d265ba9be3618ae77bbb136d092b47d7f6c0772e8efdd180f01793ed8e867cb12e'
