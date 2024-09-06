@@ -14,11 +14,11 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $regex   = '/bazelbuild/buildtools/releases/tag/[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}.*'
+  $regex   = '/bazelbuild/buildtools/releases/tag/[A-Z]?[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}.*'
   $url = $download_page.links | Where-Object href -match $regex | Select-Object -First 1 -expand href
   $version = $url -split '\/' | Select-Object -Last 1
   $url = "https://github.com/bazelbuild/buildtools/releases/download/$version/buildifier-windows-amd64.exe"
-  return @{ Version = $version; URL64 = $url; ChecksumType64 = 'sha512';}
+  return @{ Version = $version -replace '^[A-Z]+'; URL64 = $url; ChecksumType64 = 'sha512';}
 }
 
 Update-Package -ChecksumFor 64
