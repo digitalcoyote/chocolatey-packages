@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$url64 = 'https://github.com/denoland/deno/releases/download/v2.1.1/deno-x86_64-pc-windows-msvc.zip'
-$checksum64 = '7ef0f05260bef0d0b501d3c4f309aaf334b73ed7b838d54705873dc63b00020dfefcdd3822422b8c0e5b2131717c92515f1c5a9a07233ebbc42669c6a015d202'
+$url64 = 'https://github.com/denoland/deno/releases/download/v2.1.2/deno-x86_64-pc-windows-msvc.zip'
+$checksum64 = '83e49e8986e04a96315a97bd7eaf20fcc1ebbc27ff56e4000f4c5dd5abde88f88d51abe7113c3ff2b3afbd1c5878809bbc174e0aa87a0feae69e1c6fc35e88a4'
 $checksumType64 = 'sha512'
 $UnzipLocation = Join-Path $env:ChocolateyInstall (Join-Path 'lib' $env:ChocolateyPackageName)
 
