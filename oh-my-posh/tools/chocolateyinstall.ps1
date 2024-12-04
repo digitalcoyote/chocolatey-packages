@@ -1,18 +1,18 @@
 ﻿$ErrorActionPreference = 'Stop';
 $pp = Get-PackageParameters
 
-$silentArgs = "/VERYSILENT";
+$silentArgs = "/quiet /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:ChocolateyPackageVersion).MsiInstall.log`"";
 
 if ($pp['CURRENTUSER']) {
-    $silentArgs = "$silentArgs /CURRENTUSER"
+    $silentArgs = "$silentArgs"
 }
 else {
-    $silentArgs = "$silentArgs /ALLUSERS"
+    $silentArgs = "$silentArgs ALLUSERS=1"
 }
 
 $InstallArgs = @{ 
     PackageName    = $env:ChocolateyPackageName
-    FileType       = 'exe'
+    FileType       = 'msi'
     Url64bit       = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v24.8.0/install-amd64.exe'
     Checksum64     = '28e124fc0e01ee9558ee476db8bf25dbc5aff26d52baf52a2be6618698dbcb2749e17fe77a29e1e9782f5c410abc963d32e57bb6082b5e4df65f05bc70ddd585'
     SilentArgs     = $silentArgs 
