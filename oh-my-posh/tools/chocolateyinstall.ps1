@@ -10,11 +10,31 @@ else {
     $silentArgs = "$silentArgs ALLUSERS=1"
 }
 
+# From oh-my-posh version 24.11.4, the installer change to MSI (previously was a Innosetup .exe installer)
+# The old version installed into Windows Apps using a different product id, so we need to uninstall it first
+# This assumes that older version when installed included the version number in the display name
+# (which is true for "Oh My Posh version 24.5.1" at least)
+[array]$key = Get-UninstallRegistryKey -SoftwareName "Oh My Posh version*"
+
+if ($key.Count -eq 1) {
+
+    $key | ForEach-Object { 
+        $uninstallArgs = @{
+            PackageName    = $env:ChocolateyPackageName
+            FileType       = 'exe'
+            file = "$($_.UninstallString)"
+            SilentArgs     = '/VERYSILENT'
+        }
+  
+      Uninstall-ChocolateyPackage @uninstallArgs
+    }
+}
+
 $InstallArgs = @{ 
     PackageName    = $env:ChocolateyPackageName
     FileType       = 'msi'
-    Url64bit       = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v24.8.0/install-amd64.exe'
-    Checksum64     = '28e124fc0e01ee9558ee476db8bf25dbc5aff26d52baf52a2be6618698dbcb2749e17fe77a29e1e9782f5c410abc963d32e57bb6082b5e4df65f05bc70ddd585'
+    Url64bit       = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v24.11.4/install-x64.msi'
+    Checksum64     = '46c63c8a76f1e1f2b251e9ee78d45be0b7fe3366e4660f688bd0db426f2ecfeb8fdc3c890010a3113ba496bb6ad63592484a0ef1d3f8c4c1496525d48e288fa4'
     SilentArgs     = $silentArgs 
     ChecksumType64 = 'sha512'
 }
