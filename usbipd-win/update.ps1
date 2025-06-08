@@ -17,7 +17,7 @@ function global:au_GetLatest {
   $regex   = '\/dorssel\/usbipd-win\/releases\/tag\/v[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}$'
   $url     = $download_page.links | Where-Object href -match $regex | Select-Object -First 1 -expand href
   $version = $url -split '\/|v' | Select-Object -Last 1
-  $url = "https://github.com/dorssel/usbipd-win/releases/download/v$version/usbipd-win_$version.msi"
+  $url = "https://github.com/dorssel/usbipd-win/releases/download/v${version}/usbipd-win_${version}_x64.msi"
   return @{ Version = $version; URL64 = $url; ChecksumType64 = 'sha512';}
 }
 
