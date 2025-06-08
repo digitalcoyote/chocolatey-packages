@@ -21,8 +21,8 @@ $args = @{
   PackageName = $env:ChocolateyPackageName
   FileType = 'exe'
   SilentArgs = '/S'
-  Url64bit = 'https://github.com/canonical/multipass/releases/download/v1.12.2/multipass-1.12.2+win-win64.exe'
-  Checksum64 = ''
+  Url64bit = 'https://github.com/canonical/multipass/releases/download/v1.15.1/multipass-1.15.1+win-win64.msi'
+  Checksum64 = '98e03499d406066e56ee276a35217fc391897282cfc77ff694077715bfb3d2f78cfd4c555c65c61c923ce38630e70e06a963428f11002ffa1dd770a1f16264d5'
   ChecksumType64 = 'sha512'
 }
 

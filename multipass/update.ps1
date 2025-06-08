@@ -15,8 +15,8 @@ function global:au_SearchReplace {
   }
 }
 function global:au_GetLatest {
-  $version = '1.12.2'
-  $url = "https://github.com/canonical/multipass/releases/download/v$version/multipass-$version+win-win64.exe"
+  $version = '1.15.1'
+  $url = "https://github.com/canonical/multipass/releases/download/v$version/multipass-$version+win-win64.msi"
   $releaseNotes = "https://github.com/canonical/multipass/releases/tag/v$version"
   return @{ Version = $version; URL64 = $url; ChecksumType64 = 'sha512'; ReleaseNotes = $releaseNotes}
 }
