@@ -33,8 +33,8 @@ if ($key.Count -eq 1) {
 $InstallArgs = @{ 
     PackageName    = $env:ChocolateyPackageName
     FileType       = 'msi'
-    Url64bit       = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v26.24.1/install-x64.msi'
-    Checksum64     = '1c4127337362dbac29fd14fd90f2192b1d8290209293477d025383c1b686d57b69e2990b09b24662df02371d58a09de6778fe71d1bf8221017b570e091ce7673'
+    Url64bit       = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v26.25.0/install-x64.msi'
+    Checksum64     = '54a7f1f56d2476451038f4c62c06f13d5ee5028016bea9a64c28a39b7db8d2e83929e77a4e28dfab2e10c754cf0aa86aaeef554dd1b0a30ca8e0c0ee4de2f8c4'
     SilentArgs     = $silentArgs 
     ChecksumType64 = 'sha512'
 }
