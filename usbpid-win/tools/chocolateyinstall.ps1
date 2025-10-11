@@ -4,8 +4,8 @@ $InstallArgs = @{
     PackageName = $env:ChocolateyPackageName
     FileType = 'msi'
     SilentArgs = '/qn'
-    URL = 'https://github.com/dorssel/usbipd-win/releases/download/v5.2.0/usbipd-win_5.2.0_x64.msi'
-    Checksum = '2c1961c1c4353dbcd5ac35b03a4ba1a1a7f8a9fff9e6d94025186a0f1a0d1837158180ffa63fcffda47dac65f8cd05712bd92ed2db850f09b529db56a39b3180'
+    URL = 'https://github.com/dorssel/usbipd-win/releases/download/v5.3.0/usbipd-win_5.3.0_x64.msi'
+    Checksum = 'd50e11de2c1e8b1c0f120adab1abad1b99b4e76566be87609a1b4eb8254bdf91da17c6948adfe5456167514e3ff7b2e26c0b1e0063201fc505a0813573234719'
     ChecksumType = 'sha512'
 }
 
