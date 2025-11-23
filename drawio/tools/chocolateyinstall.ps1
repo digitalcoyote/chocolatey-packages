@@ -10,7 +10,7 @@ $packageArgs = @{
   #file          = "$toolsDir/draw.io-11.1.4-windows-installer.exe"
   url           = $url
   softwareName  = 'drawio*'
-  checksum      = 'b4e862f2c8fe6409fbd6f6e41509d0dde8c388bbb1a7cc7bdda7d9d6c99cde7c4571f912a9e44d052c337efec709a3ad70c8537560acb4a9411312a3de67588c'
+  checksum      = '0162ca9566d492308eeaa08f8af5bd83de81f1cabe83c2b2093f68bde4e8dd8c15e46e2b1d93f2eed70315731ec4b071604f5088a3929c5bde5da8256f534dc2'
   checksumType  = 'sha512'
   silentArgs   = '/S'
 }
