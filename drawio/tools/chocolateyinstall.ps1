@@ -7,7 +7,6 @@ $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
   fileType      = 'EXE'
-  #file          = "$toolsDir/draw.io-11.1.4-windows-installer.exe"
   url           = $url
   softwareName  = 'drawio*'
   checksum      = 'c76a119101215f47c9635831c94474cd2136bff5a5a40c0238c55cca362b7abc832026523fff2e318c5f0e95e84f3331e69229f7bae95b9a0f0e34c8de1af14f'
