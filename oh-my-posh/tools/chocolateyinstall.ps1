@@ -1,15 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 $pp = Get-PackageParameters
 
-$silentArgs = "/quiet /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:ChocolateyPackageVersion).MsiInstall.log`"";
-
-if ($pp['CURRENTUSER']) {
-    $silentArgs = "$silentArgs"
-}
-else {
-    $silentArgs = "$silentArgs ALLUSERS=1"
-}
-
 # From oh-my-posh version 24.11.4, the installer change to MSI (previously was a Innosetup .exe installer)
 # The old version installed into Windows Apps using a different product id, so we need to uninstall it first
 # This assumes that older version when installed included the version number in the display name
@@ -22,7 +13,7 @@ if ($key.Count -eq 1) {
         $uninstallArgs = @{
             PackageName    = $env:ChocolateyPackageName
             FileType       = 'exe'
-            file = "$($_.UninstallString)"
+            file           = "$($_.UninstallString)"
             SilentArgs     = '/VERYSILENT'
         }
   
@@ -30,16 +21,19 @@ if ($key.Count -eq 1) {
     }
 }
 
-$InstallArgs = @{ 
+$toolsDir  = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
+$msixFile  = Join-Path $toolsDir 'install-x64.msix'
+
+$DownloadArgs = @{ 
     PackageName    = $env:ChocolateyPackageName
-    FileType       = 'msi'
-    Url64bit       = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.26.1/install-x64.msi'
-    Checksum64     = 'd88d98eff0296fedb967d6eeb53a155dc6915ae68b948516a0c5c9cb17d37f09f0a519c962cde6c7f6a332e2c4d88f10d18e31bfd50e98a4fae6caaf174b5cd3'
-    SilentArgs     = $silentArgs 
-    ChecksumType64 = 'sha512'
+    Url64bit       = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v30.9.0/install-x64.msix'
+    Checksum64     = 'b369aa5ef533f6ec8602f59eda6df734d1ddd5961827cd242c6b43078e8265da'
+    ChecksumType64 = 'sha256'
+    FileFullPath   = $msixFile
 }
 
-Install-ChocolateyPackage  @InstallArgs
+Get-ChocolateyWebFile @DownloadArgs
+Add-AppxPackage -Path $msixFile
 
 if (Test-Path Function:\au_GetLatest) {
     # Finish here if we're running inside AU

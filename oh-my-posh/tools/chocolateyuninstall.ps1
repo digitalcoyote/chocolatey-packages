@@ -1,4 +1,21 @@
-﻿#Remove added lines from Profile
+﻿$ErrorActionPreference = 'Stop'
+
+# Remove the MSIX package
+$appx = Get-AppxPackage -Name "*oh-my-posh*"
+if ($appx) {
+    Remove-AppxPackage -Package $appx.PackageFullName
+    Write-Host "oh-my-posh Appx package removed successfully."
+}
+
+# Legacy fallback for older MSI/EXE installs
+[array]$key = Get-UninstallRegistryKey -SoftwareName "Oh My Posh*"
+if ($key.Count -ge 1) {
+    $key | ForEach-Object { 
+        Uninstall-ChocolateyPackage -PackageName $env:ChocolateyPackageName -FileType 'msi' -SilentArgs '/quiet /norestart'
+    }
+}
+
+# Remove added lines from Profile
 if ($PROFILE -and (Test-Path $PROFILE)) {
     $oldProfile = @(Get-Content $PROFILE)
 
@@ -17,7 +34,7 @@ if ($PROFILE -and (Test-Path $PROFILE)) {
         $newProfile += $line
     }
   
-    Set-Content -path $profile -value $newProfile -Force
+    Set-Content -Path $PROFILE -Value $newProfile -Force
     Write-Host "oh-my-posh has been removed from your Powershell profile."
   }
   else{
