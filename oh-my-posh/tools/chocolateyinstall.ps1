@@ -26,8 +26,8 @@ $msixFile  = Join-Path $toolsDir 'install-x64.msix'
 
 $DownloadArgs = @{ 
     PackageName    = $env:ChocolateyPackageName
-    Url64bit       = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v31.7.0/install-x64.msix'
-    Checksum64     = '1353de34f1c0fdc18aafcad0924ce09b7583b4bb14743b520e71a3a101bc54ad'
+    Url64bit       = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v31.8.0/install-x64.msix'
+    Checksum64     = 'c16228aaf44d38e9ed41597293f177738ef2764fb67f207f922aba896abb32d5'
     ChecksumType64 = 'sha256'
     FileFullPath   = $msixFile
 }
